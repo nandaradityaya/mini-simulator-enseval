@@ -1,0 +1,588 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form Evaluation</title>
+  <link rel="icon" href="assets/images/logo-myplanet-2.png" type="image/png" />
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <!--bootstrap harus tetep di atas file css-->
+  <link rel="stylesheet" href="css/custom.css" />
+  <link href="assets/css/icons.css" rel="stylesheet">
+  <link href="assets/plugins/datatable/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet" />
+</head>
+
+<body class="body-elearning">
+  <!-- NAVBAR -->
+  <div class="">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="assets/logo.png" alt="" class="d-inline-block align-text-top" />
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <!--ms itu margin kiri-->
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="e-learning.html">E-Learning</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="policy.html">Policy</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="podtret.html">Podtret</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Ensight</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Community</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Aplication
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">HRIS Pro Int</a></li>
+                  <li><a class="dropdown-item" href="#">LOAN Online</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">FPTK Online</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Assesment Online</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Administrasi Assesment</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">AP & PA Online</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">MPP Online</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Orens</a>
+                  </li>
+                </ul>
+              </li>
+              <!-- <a class="btn btn-login ms-2" href="#" role="button">Sign Up</a> -->
+            </ul>
+            <!-- Button trigger modal -->
+            <div class="vl ms-2" style="border-left: solid 2px #ededed">
+              <img src="images/image-profile.jpg" alt="" class="image-navbar ms-3" onclick="toggleMenu()" />
+              <span class="badge">1</span>
+
+              <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                  <div class="user-info">
+                    <a href="profile.html"><img src="images/image-profile.jpg" alt="" class="img-nav-submenu" /></a>
+                    <a href="profile.html">
+                      <h3>Harry Maguire</h3>
+                    </a>
+                  </div>
+                  <hr />
+
+                  <a href="edit-profile.html" class="sub-menu-link">
+                    <i class="fa fa-user"></i>
+                    <!-- <img src="assets/user-info.png" alt="" /> -->
+                    <p>Edit Profile</p>
+                    <span>></span>
+                  </a>
+
+                  <a href="" class="sub-menu-link" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <i class="fa fa-bell"><span class="badge-not">1</span></i>
+                    <!-- <img src="assets/user-info.png" alt="" /> -->
+                    <p>Notification</p>
+                    <span>></span>
+                  </a>
+
+                  <a href="" class="sub-menu-link">
+                    <i class="fa fa-sign-out"></i>
+                    <!-- <img src="assets/logout.png" alt="" /> -->
+                    <p>Log Out</p>
+                    <span>></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Modal Notifikasi -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content modal-notification">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Notification</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="d-flex list-notification">
+            <a href="e-learning-neopgeneral.html"><img src="images/img-notif.jpg" alt="" class="img-nav-submenu" /></a>
+            <a href="e-learning-neopgeneral.html"></a>
+            <div class="berita">
+              <p>
+                Undangan! Kamu di undang untuk mengikuti kegiatan training
+                mengenai IT Security
+              </p>
+              <p1>18 September 2022</p1>
+              <a href=""><i class="fa fa-trash fa-lg trash-notification"></i></a>
+            </div>
+            </a>
+          </div>
+          <hr />
+          <div class="d-flex list-notification">
+            <a href="profile.html"><img src="images/img-notif.jpg" alt="" class="img-nav-submenu" /></a>
+            <a href="profile.html">
+              <div class="berita">
+                <p>
+                  Selamat! sertifikat anda sudah terbit, untuk melihat silahkan kunjungi halaman profile
+                </p>
+                <p1>12 September 2022</p1>
+                <a href=""><i class="fa fa-trash fa-lg trash-notification"></i></a>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Close
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-popular-heading mt-5 mb-5">
+    <div class="d-flex align-items-center justify-content-center">
+      <div class="nav-menu-learning justify-content-center" id="kategoriContainer">
+        <a href="dashboard-coordinator.html" type="button" class="px-3 py-1 text-decoration-none mb-2">Dashboard</a>
+        <a href="learning.html" type="button" class="px-3 py-1 text-decoration-none mb-2">Learning</a>
+        <a href="report.html" type="button" class="px-3 py-1 text-decoration-none mb-2">Report</a>
+        <a href="#" type="button" class="px-3 py-1 text-decoration-none mb-2">Participant</a>
+        <a href="#" type="button" class="px-3 py-1 active text-decoration-none mb-2">Evaluation</a>
+      </div>
+      <!-- <div class="position-relative ms-2 mt-2">
+        <input type="text" class="form-control ps-5" placeholder="Search" style="
+          border-radius: 20px;
+          height: 32px;" id="search" onkeyup="search(this.value)"> 
+          <span class="position-absolute top-50 product-show translate-middle-y" style="
+          font-size: 18px;
+          left: 15px;
+          position: absolute;
+        "><i class="fa fa-search"></i></span>
+      </div> -->
+    </div>
+  </div>
+
+  <!-- breadcrumb -->
+  <div class="container">
+    <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+      <div class="breadcrumb-title pe-3 text-white">Evaluation</div>
+      <div class="ps-3">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-0 p-0">
+            <li class="breadcrumb-item"><a href="dashboard-spv.html"><i class="fa fa-home"></i></a>
+            </li>
+            <li class="breadcrumb-item text-white">Form Evaluation</li>
+          </ol>
+        </nav>
+      </div>
+      <!-- <div id="paginationReportUser" class="ms-auto"></div> -->
+    </div>
+  </div>
+  <!-- end breadcrumb -->
+
+  <div class="container">
+    <hr style="border: solid 1px #fff;">
+  </div>
+
+
+
+  <!-- Floating Button -->
+  <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
+    <img src="assets/ic-arrow-up.png" alt="" width="24" />
+    <!-- <i class="fas fa-arrow-up"
+      ><img src="assets/Arrow up.svg" alt="" width="18"
+    /></i> -->
+  </button>
+  <!-- Floating Button -->
+
+  <section>
+    <div class="container">
+      <div class="d-flex justify-content-center mb-4">
+        <div>
+          <h5 class="font-weight-bold mb-0">Form Penilaian MSBW</h5>
+        </div>
+      </div>
+      <div class="card card-mini-simulator mb-5">
+        <div class="card-header py-3">
+          <h6 class="text-white text-center">Checker Receiving</h6>
+        </div>
+        <div class="card-body">
+
+          <div class="activity-evaluation">
+            <div class="d-flex row mb-2">
+              <div class="col-8 evaluation">
+                <p class="text-paragraph mb-0"><span class="number-form">1. </span><span class="activities-form">Queing
+                    Time
+                    Inbound</span></p>
+              </div>
+              <div class="col-4 guideline" style="text-align: end;">
+                <a data-bs-toggle="modal" data-bs-target="#modalGuideline" type="button"
+                  class="text-white text-paragraph">Guideline
+                  <span style="color: #ffc107"><i class="fa fa-exclamation-circle ms-1 font-18"></i></span></a>
+              </div>
+            </div>
+            <p class="text-paragraph"><span class="measurement-form">Jam Tiba Armada sampai dengan Jam Bongkar ≤ 24
+                Jam</span></p>
+            <!-- Slider -->
+            <div class="slider-container d-flex align-items-center mb-3">
+              <input type="range" min="0" max="100" value="50" class="slider slider-form" id="myRange">
+              <input type="number" min="0" max="100" value="50" class="slider-value" id="slider-value">
+            </div>
+            <!-- end Slider -->
+            <div class="row">
+              <div class="col-lg-9 col-md-9 col-sm-12">
+                <div class="mb-3 notes-evaluation">
+                  <label for="formNotes" class="form-label text-paragraph">Notes</label>
+                  <textarea class="form-control text-paragraph text-black" id="formNotes" rows="3"></textarea>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-12">
+                <div class="mb-3">
+                  <label for="formFile" class="form-label text-paragraph">Upload Attachment</label>
+                  <input class="form-control text-paragraph text-black" type="file" id="formFile">
+                </div>
+              </div>
+            </div>
+            <hr style="border: 2px solid #ffffff; border-radius: 20px;">
+          </div>
+
+          <div class="activity-evaluation">
+            <div class="d-flex row mb-2">
+              <div class="col-8 evaluation">
+                <p class="text-paragraph mb-0"><span class="number-form">2. </span><span
+                    class="activities-form">Unloading Time</span></p>
+              </div>
+              <div class="col-4 guideline" style="text-align: end;">
+                <a data-bs-toggle="modal" data-bs-target="#modalGuideline" type="button"
+                  class="text-white text-paragraph">Guideline
+                  <span style="color: #ffc107"><i class="fa fa-exclamation-circle ms-1 font-18"></i></span></a>
+              </div>
+            </div>
+            <p class="text-paragraph"><span class="measurement-form">Jam Mulai Bongkar - Selesai Bongkar sesuai target
+                per jenis armada</span></p>
+            <!-- Slider -->
+            <div class="slider-container d-flex align-items-center mb-3">
+              <input type="range" min="0" max="100" value="50" class="slider slider-form" id="myRange">
+              <input type="number" min="0" max="100" value="50" class="slider-value" id="slider-value">
+            </div>
+            <!-- end Slider -->
+            <div class="row">
+              <div class="col-lg-9 col-md-9 col-sm-12">
+                <div class="mb-3 notes-evaluation">
+                  <label for="formNotes" class="form-label text-paragraph">Notes</label>
+                  <textarea class="form-control text-paragraph text-black" id="formNotes" rows="3"></textarea>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-12">
+                <div class="mb-3">
+                  <label for="formFile" class="form-label text-paragraph">Upload Attachment</label>
+                  <input class="form-control text-paragraph text-black" type="file" id="formFile">
+                </div>
+              </div>
+            </div>
+            <hr style="border: 2px solid #ffffff; border-radius: 20px;">
+          </div>
+
+
+        </div>
+      </div>
+
+      <div class="card card-mini-simulator mb-5">
+        <div class="card-header py-3">
+          <h6 class="text-white text-center">Checker Outbound</h6>
+        </div>
+        <div class="card-body">
+
+          <div class="activity-evaluation">
+            <div class="d-flex row mb-2">
+              <div class="col-8 evaluation">
+                <p class="text-paragraph mb-0"><span class="number-form">1. </span><span
+                    class="activities-form">Loading</span></p>
+              </div>
+              <div class="col-4 guideline" style="text-align: end;">
+                <a data-bs-toggle="modal" data-bs-target="#modalGuideline" type="button"
+                  class="text-white text-paragraph">Guideline
+                  <span style="color: #ffc107"><i class="fa fa-exclamation-circle ms-1 font-18"></i></span></a>
+              </div>
+            </div>
+            <p class="text-paragraph"><span class="measurement-form">Jumlah Task per checker : jam kerja checker
+                Diluar Jam Lembur</span></p>
+            <!-- Slider -->
+            <div class="slider-container d-flex align-items-center mb-3">
+              <input type="range" min="0" max="100" value="50" class="slider slider-form" id="myRange">
+              <input type="number" min="0" max="100" value="50" class="slider-value" id="slider-value">
+            </div>
+            <!-- end Slider -->
+            <div class="row">
+              <div class="col-lg-9 col-md-9 col-sm-12">
+                <div class="mb-3 notes-evaluation">
+                  <label for="formNotes" class="form-label text-paragraph">Notes</label>
+                  <textarea class="form-control text-paragraph text-black" id="formNotes" rows="3"></textarea>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-12">
+                <div class="mb-3">
+                  <label for="formFile" class="form-label text-paragraph">Upload Attachment</label>
+                  <input class="form-control text-paragraph text-black" type="file" id="formFile">
+                </div>
+              </div>
+            </div>
+            <hr style="border: 2px solid #ffffff; border-radius: 20px;">
+          </div>
+
+          <div class="activity-evaluation">
+            <div class="d-flex row mb-2">
+              <div class="col-8 evaluation">
+                <p class="text-paragraph mb-0"><span class="number-form">2. </span><span
+                    class="activities-form">Loading</span></p>
+              </div>
+              <div class="col-4 guideline" style="text-align: end;">
+                <a data-bs-toggle="modal" data-bs-target="#modalGuideline" type="button"
+                  class="text-white text-paragraph">Guideline
+                  <span style="color: #ffc107"><i class="fa fa-exclamation-circle ms-1 font-18"></i></span></a>
+              </div>
+            </div>
+            <p class="text-paragraph"><span class="measurement-form">Jumlah Dokumen per checker : jam kerja checker
+                Diluar Jam Lembur</span></p>
+            <!-- Slider -->
+            <div class="slider-container d-flex align-items-center mb-3">
+              <input type="range" min="0" max="100" value="50" class="slider slider-form" id="myRange">
+              <input type="number" min="0" max="100" value="50" class="slider-value" id="slider-value">
+            </div>
+            <!-- end Slider -->
+            <div class="row">
+              <div class="col-lg-9 col-md-9 col-sm-12">
+                <div class="mb-3 notes-evaluation">
+                  <label for="formNotes" class="form-label text-paragraph">Notes</label>
+                  <textarea class="form-control text-paragraph text-black" id="formNotes" rows="3"></textarea>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-12">
+                <div class="mb-3">
+                  <label for="formFile" class="form-label text-paragraph">Upload Attachment</label>
+                  <input class="form-control text-paragraph text-black" type="file" id="formFile">
+                </div>
+              </div>
+            </div>
+            <hr style="border: 2px solid #ffffff; border-radius: 20px;">
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Guideline -->
+    <div class="modal fade" id="modalGuideline" tabindex="-1" aria-labelledby="modalGuidelineLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content bg-dark">
+          <div class="modal-header">
+            <h6 class="modal-title fs-5 text-white" id="modalGuidelineLabel">Guideline</h6>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="activities-guideline mb-3">
+              <p class="text-paragraph font-bold-500 mb-0">Activities</p>
+              <p class="text-paragraph">Queing Time Inbound</p>
+            </div>
+            <div class="measurement-guideline">
+              <p class="text-paragraph font-bold-500 mb-0">Measurement</p>
+              <p class="text-paragraph">Jam Tiba Armada sampai dengan Jam Bongkar ≤ 24 Jam</p>
+            </div>
+            <div class="measurement-guideline">
+              <p class="text-paragraph font-bold-500 mb-0">Target</p>
+              <p class="text-paragraph">100%</p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal View Detail -->
+    <div class="modal fade" id="modalViewDetail" tabindex="-1" aria-labelledby="modalViewDetailLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modalViewDetailLabel">Detail</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <h6 class="text-black">Attachment</h5>
+                <a href="" class="text-paragraph text-blue"><i class="fa fa-download"></i>
+                  Download</a>
+            </div>
+
+            <div class="mb-3">
+              <h6 class="text-black">Notes</h6>
+              <p class="text-paragraph text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+                recusandae ipsam,
+                accusamus quos officiis delectus eius molestiae voluptatum eligendi repellat eum exercitationem earum
+                minus ipsa commodi doloremque, possimus reprehenderit nulla?</p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Modal Approve Validation -->
+  <div class="modal fade" id="modalApproveValidation" tabindex="-1" aria-labelledby="modalApproveValidationLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content bg-dark">
+        <div class="modal-header">
+          <h6 class="modal-title text-white" id="modalApproveValidationLabel">Approve Evaluation</h6>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-paragraph">
+          Are you sure want to approve this evaluation?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary font-13" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success font-13">Approve</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+
+  <footer class="section-footer mt-5 mb-4 border-top text-center">
+
+    <div class="container-fluid">
+      <div class="row border-top justify-content-center align-items-center pt-4">
+        <div class="col-auto font-weight-light" style="color: #ffffff">
+          2022 Copyright My Planet Enseval • All rights reserved • Made in
+          Jakarta
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+  <script src="assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
+  <script src="assets/plugins/datatable/js/dataTables.bootstrap5.min.js"></script>
+  <script src="js/collapse-learning.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script src="js/floating-btn.js"></script>
+  <!-- <script src="js/reportCategory.js"></script> -->
+  <script src="js/submenu-profile.js"></script>
+  <script>
+    const cards = document.querySelectorAll('.card-mini-simulator');
+    const numPages = cards.length;
+
+    function displayPage(pageIndex) {
+      for (let i = 0; i < numPages; i++) {
+        cards[i].style.display = i === pageIndex ? 'block' : 'none';
+      }
+      updateActiveButton(pageIndex);
+    }
+
+    function updateActiveButton(pageIndex) {
+      const buttons = document.querySelectorAll('#paginationReportUser button');
+      for (let i = 0; i < numPages; i++) {
+        buttons[i].classList.toggle('active', i === pageIndex);
+      }
+    }
+
+    for (let i = 0; i < numPages; i++) {
+      const button = document.createElement('button');
+      button.innerText = `${i + 1}`;
+      button.onclick = () => displayPage(i);
+      document.getElementById('paginationReportUser').appendChild(button);
+    }
+
+    displayPage(0); // show the first page by default
+  </script>
+  <!-- <script>
+    $(document).ready(function () {
+      $('#tableReport').DataTable({
+        dom: '<"row top"<"col-lg-6 col-md-6 col-sm-12 mb-2"l><"col-lg-6 col-md-6 col-sm-12 mb-2"f>>rtip'
+      });
+    });
+  </script> -->
+  <script>
+    // var slider = document.getElementById("myRange");
+    // var sliderValue = document.getElementById("slider-value");
+
+    // sliderValue.value = slider.value;
+
+    // slider.oninput = function () {
+    //   sliderValue.value = this.value;
+    // }
+
+    // sliderValue.oninput = function () {
+    //   slider.value = this.value;
+    // }
+
+    // Get all the sliders and slider values on the page
+    const sliders = document.querySelectorAll(".slider");
+    const sliderValues = document.querySelectorAll(".slider-value");
+
+    // Loop through each slider and add an event listener
+    sliders.forEach(function (slider, index) {
+      slider.addEventListener("input", function () {
+        sliderValues[index].value = slider.value;
+      });
+    });
+
+    // Loop through each slider value input field and add an event listener
+    sliderValues.forEach(function (sliderValue) {
+      sliderValue.addEventListener("input", function () {
+        // Get the corresponding slider element
+        const slider = sliderValue.previousElementSibling;
+        // Set the slider value to match the input field value
+        slider.value = sliderValue.value;
+      });
+    });
+
+
+  </script>
+</body>
+
+</html>

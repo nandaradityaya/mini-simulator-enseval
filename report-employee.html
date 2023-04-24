@@ -1,0 +1,1187 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Report</title>
+  <link rel="icon" href="assets/images/logo-myplanet-2.png" type="image/png" />
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <!--bootstrap harus tetep di atas file css-->
+  <link rel="stylesheet" href="css/custom.css" />
+  <link href="assets/plugins/datatable/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet" />
+</head>
+
+<body class="body-elearning">
+  <!-- NAVBAR -->
+  <div class="">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="assets/logo.png" alt="" class="d-inline-block align-text-top" />
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <!--ms itu margin kiri-->
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="e-learning.html">E-Learning</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="policy.html">Policy</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="podtret.html">Podtret</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Ensight</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Community</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Aplication
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">HRIS Pro Int</a></li>
+                  <li><a class="dropdown-item" href="#">LOAN Online</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">FPTK Online</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Assesment Online</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Administrasi Assesment</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">AP & PA Online</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">MPP Online</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Orens</a>
+                  </li>
+                </ul>
+              </li>
+              <!-- <a class="btn btn-login ms-2" href="#" role="button">Sign Up</a> -->
+            </ul>
+            <!-- Button trigger modal -->
+            <div class="vl ms-2" style="border-left: solid 2px #ededed">
+              <img src="images/image-profile.jpg" alt="" class="image-navbar ms-3" onclick="toggleMenu()" />
+              <span class="badge">1</span>
+
+              <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                  <div class="user-info">
+                    <a href="profile.html"><img src="images/image-profile.jpg" alt="" class="img-nav-submenu" /></a>
+                    <a href="profile.html">
+                      <h3>Harry Maguire</h3>
+                    </a>
+                  </div>
+                  <hr />
+
+                  <a href="edit-profile.html" class="sub-menu-link">
+                    <i class="fa fa-user"></i>
+                    <!-- <img src="assets/user-info.png" alt="" /> -->
+                    <p>Edit Profile</p>
+                    <span>></span>
+                  </a>
+
+                  <a href="" class="sub-menu-link" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <i class="fa fa-bell"><span class="badge-not">1</span></i>
+                    <!-- <img src="assets/user-info.png" alt="" /> -->
+                    <p>Notification</p>
+                    <span>></span>
+                  </a>
+
+                  <a href="" class="sub-menu-link">
+                    <i class="fa fa-sign-out"></i>
+                    <!-- <img src="assets/logout.png" alt="" /> -->
+                    <p>Log Out</p>
+                    <span>></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Modal Notifikasi -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content modal-notification">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Notification</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="d-flex list-notification">
+            <a href="e-learning-neopgeneral.html"><img src="images/img-notif.jpg" alt="" class="img-nav-submenu" /></a>
+            <a href="e-learning-neopgeneral.html"></a>
+            <div class="berita">
+              <p>
+                Undangan! Kamu di undang untuk mengikuti kegiatan training
+                mengenai IT Security
+              </p>
+              <p1>18 September 2022</p1>
+              <a href=""><i class="fa fa-trash fa-lg trash-notification"></i></a>
+            </div>
+            </a>
+          </div>
+          <hr />
+          <div class="d-flex list-notification">
+            <a href="profile.html"><img src="images/img-notif.jpg" alt="" class="img-nav-submenu" /></a>
+            <a href="profile.html">
+              <div class="berita">
+                <p>
+                  Selamat! sertifikat anda sudah terbit, untuk melihat silahkan kunjungi halaman profile
+                </p>
+                <p1>12 September 2022</p1>
+                <a href=""><i class="fa fa-trash fa-lg trash-notification"></i></a>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Close
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-popular-heading mt-5 mb-5">
+    <div class="d-flex align-items-center justify-content-center">
+      <div class="nav-menu-learning justify-content-center" id="kategoriContainer">
+        <a href="mini-simulator.html" type="button" class="px-3 py-1 text-decoration-none">Dashboard</a>
+        <a href="learning.html" type="button" class="px-3 py-1 text-decoration-none">Learning</a>
+        <a href="" type="button" class="px-3 py-1 active text-decoration-none">Report</a>
+      </div>
+      <!-- <div class="position-relative ms-2 mt-2">
+        <input type="text" class="form-control ps-5" placeholder="Search" style="
+          border-radius: 20px;
+          height: 32px;" id="search" onkeyup="search(this.value)"> 
+          <span class="position-absolute top-50 product-show translate-middle-y" style="
+          font-size: 18px;
+          left: 15px;
+          position: absolute;
+        "><i class="fa fa-search"></i></span>
+      </div> -->
+    </div>
+  </div>
+
+  <!-- breadcrumb -->
+  <div class="container">
+    <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+      <div class="breadcrumb-title pe-3 text-white">Report</div>
+      <div class="ps-3">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-0 p-0">
+            <li class="breadcrumb-item"><a href="mini-simulator.html"><i class="fa fa-home"></i></a>
+            </li>
+            <li class="breadcrumb-item text-white">Report</li>
+          </ol>
+        </nav>
+      </div>
+      <!-- <div id="paginationReportUser" class="ms-auto"></div> -->
+    </div>
+  </div>
+  <!-- end breadcrumb -->
+
+  <div class="container">
+    <hr style="border: solid 1px #fff;">
+  </div>
+
+  <!-- E-Learning -->
+  <section class="section-popular mt-4 mb-3" id="popular">
+    <div class="container">
+      <!-- <div class="row">
+        <div class="col text-center section-popular-heading">
+          <h2>MSBW</h2>
+        </div>
+      </div> -->
+      <!-- <div class="section-popular-heading d-flex align-items-center">
+        <h5>MSBW</h5>
+        <div id="paginationReportUser" class="ms-auto"></div>
+      </div> -->
+      <div class="section-popular-heading mt-4 mb-4">
+        <div class="d-flex align-items-center justify-content-center">
+          <div class="nav-menu-learning justify-content-center" id="kategoriContainer">
+            <a type="button" class="px-3 py-1 text-decoration-none tablinks mb-2 active"
+              onclick="categoryBtn(event, 'checkReceiving')">Checker Receiving</a>
+            <a type="button" class="px-3 py-1 text-decoration-none tablinks mb-2"
+              onclick="categoryBtn(event, 'checkOutbound')">Checker Outbound</a>
+            <a type="button" class="px-3 py-1 text-decoration-none tablinks mb-2"
+              onclick="categoryBtn(event, 'transporter')">Transporter</a>
+            <a type="button" class="px-3 py-1 text-decoration-none tablinks mb-2"
+              onclick="categoryBtn(event, 'petRetur')">Pet Retur</a>
+            <a type="button" class="px-3 py-1 text-decoration-none tablinks mb-2"
+              onclick="categoryBtn(event, 'picker')">Picker</a>
+            <a type="button" class="px-3 py-1 text-decoration-none tablinks mb-2"
+              onclick="categoryBtn(event, 'whsAdministration')">Whs Administration</a>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-start">
+        <div class="text-white">MSBW Score : <span>
+            <div class="badge rounded-pill text-white bg-success p-2 text-uppercase px-3">
+              75</div>
+          </span> <span>
+            <div class="badge rounded-pill text-white bg-warning p-2 text-uppercase px-3">
+              70</div>
+          </span>
+          <span>
+            <div class="badge rounded-pill text-white bg-danger p-2 text-uppercase px-3">
+              60</div>
+          </span>
+          <span>
+            <div class="badge rounded-pill text-white bg-secondary p-2 text-uppercase px-3">
+              Not Initiated</div>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating Button -->
+  <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
+    <img src="assets/ic-arrow-up.png" alt="" width="24" />
+    <!-- <i class="fas fa-arrow-up"
+      ><img src="assets/Arrow up.svg" alt="" width="18"
+    /></i> -->
+  </button>
+  <!-- Floating Button -->
+
+  <section>
+    <div class="container">
+
+      <div class="card card-mini-simulator py-3 px-2 mb-4">
+        <h5 class="text-white text-center">There's no evaluation report for this employee</h5>
+      </div>
+
+      <div id="checkReceiving" class="card card-mini-simulator py-3 px-2 mb-4">
+        <div class="card-header">
+          <h5 class="text-white text-center">Checker Receiving</h5>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive mb-4">
+            <table id="tableReport" class="table mb-0 align-middle">
+              <thead style="color:#ffffff; background-color: rgba(0,0,0,0.5);">
+                <tr>
+                  <th>No</th>
+                  <th>Activities</th>
+                  <th>Measurement</th>
+                  <th>Target</th>
+                  <th>Score</th>
+                  <th>Detail</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="color:#ffffff; background-color: rgba(34,34,34,0.5);">
+                  <td>1</td>
+                  <td>Queing Time Inbound</td>
+                  <td>Jam Tiba Armada sampai dengan Jam Bongkar ≤ 24 Jam</td>
+                  <td>100%</td>
+                  <td>
+                    <div class="badge rounded-pill text-white bg-success p-2 text-uppercase px-3">
+                      80</div>
+                  </td>
+                  <td><button type="button" class="btn btn-planet btn-sm radius-30 px-4" data-bs-toggle="modal"
+                      data-bs-target="#modalViewDetail">View
+                      Details</button></td>
+                </tr>
+                <tr style="color:#ffffff; background-color: rgba(34,34,34,0.5);">
+                  <td>2</td>
+                  <td>Unloading TIme</td>
+                  <td>Jam Mulai Bongkar - Selesai Bongkar sesuai target per jenis armada</td>
+                  <td>100%</td>
+                  <td>
+                    <div class="badge rounded-pill text-white bg-violet p-2 text-uppercase px-3">
+                      60</div>
+                  </td>
+                  <td><button type="button" class="btn btn-planet btn-sm radius-30 px-4" data-bs-toggle="modal"
+                      data-bs-target="#modalViewDetail">View
+                      Details</button></td>
+                </tr>
+                <tr style="color:#ffffff; background-color: rgba(34,34,34,0.5);">
+                  <td>3</td>
+                  <td>Stock Accuracy</td>
+                  <td>Akurasi Penerimaan Barang</td>
+                  <td>100%</td>
+                  <td>
+                    <div class="badge rounded-pill text-black bg-warning p-2 text-uppercase px-3">
+                      50</div>
+                  </td>
+                  <td><button type="button" class="btn btn-planet btn-sm radius-30 px-4" data-bs-toggle="modal"
+                      data-bs-target="#modalViewDetail">View
+                      Details</button></td>
+                </tr>
+                <tr style="color:#ffffff; background-color: rgba(34,34,34,0.5);">
+                  <td>4</td>
+                  <td>5R</td>
+                  <td>Point Excellent</td>
+                  <td>360</td>
+                  <td>
+                    <div class="badge rounded-pill text-white bg-info p-2 text-uppercase px-3">
+                      70</div>
+                  </td>
+                  <td><button type="button" class="btn btn-planet btn-sm radius-30 px-4" data-bs-toggle="modal"
+                      data-bs-target="#modalViewDetail">View
+                      Details</button></td>
+                </tr>
+              </tbody>
+              <tfoot style="color:#ffffff; background-color: rgba(0,0,0,0.5);">
+                <tr>
+                  <th>No</th>
+                  <th>Activities</th>
+                  <th>Measurement</th>
+                  <th>Target</th>
+                  <th>Score</th>
+                  <th>Detail</th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+
+          <hr class="mb-4" style="border: 1px solid rgb(255, 255, 255 );" />
+          <div class="table-responsive">
+            <table id="tableReport" class="table mb-0 align-middle">
+              <thead style="color:#ffffff; background-color: rgba(0,0,0,0.5);">
+                <tr>
+                  <th>No</th>
+                  <th>Post Test</th>
+                  <th class="text-center">Attempt</th>
+                  <th class="text-center">Passing Score</th>
+                  <th class="text-center">Score</th>
+                  <th class="text-center">Status</th>
+                  <th class="text-center">Detail</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="color:#ffffff; background-color: rgba(34,34,34,0.5);">
+                  <td>1</td>
+                  <td>Checker Receiving</td>
+                  <td class="text-center">2</td>
+                  <td class="text-center">75</td>
+                  <td class="text-center">
+                    <div class="badge rounded-pill text-white bg-success p-2 text-uppercase px-3">
+                      80</div>
+                  </td>
+                  <td class="text-center">
+                    <div class="badge rounded-pill text-white bg-success p-2 text-uppercase px-3">
+                      Lulus</div>
+                  </td>
+                  <td class="text-center"><button type="button" class="btn btn-planet btn-sm radius-30 px-4"
+                      data-bs-toggle="modal" data-bs-target="#modalViewDetail">View
+                      Details</button></td>
+                </tr>
+              </tbody>
+              <tfoot style="color:#ffffff; background-color: rgba(0,0,0,0.5);">
+                <tr>
+                  <th>No</th>
+                  <th>Post Test</th>
+                  <th class="text-center">Attempt</th>
+                  <th class="text-center">Passing Score</th>
+                  <th class="text-center">Score</th>
+                  <th class="text-center">Status</th>
+                  <th class="text-center">Detail</th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div id="checkOutbound" class="card card-mini-simulator py-3 px-2 mb-4">
+        <div class="card-header">
+          <h5 class="text-white text-center">Checker Outbound</h5>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive mb-4">
+            <table id="tableReport" class="table mb-0 align-middle">
+              <thead style="color:#ffffff; background-color: rgba(0,0,0,0.5);">
+                <tr>
+                  <th>No</th>
+                  <th>Activities</th>
+                  <th>Measurement</th>
+                  <th>Target</th>
+                  <th>Score</th>
+                  <th>Detail</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="color:#ffffff; background-color: rgba(34,34,34,0.5);">
+                  <td>1</td>
+                  <td>Loading</td>
+                  <td>Jumlah Task per checker : jam kerja checker Diluar Jam Lembur</td>
+                  <td>60 task / Jam</td>
+                  <td>
+                    <div class="badge rounded-pill text-white bg-success p-2 text-uppercase px-3">
+                      80</div>
+                  </td>
+                  <td><button type="button" class="btn btn-planet btn-sm radius-30 px-4" data-bs-toggle="modal"
+                      data-bs-target="#modalViewDetail">View
+                      Details</button></td>
+                </tr>
+                <tr style="color:#ffffff; background-color: rgba(34,34,34,0.5);">
+                  <td>2</td>
+                  <td>Loading</td>
+                  <td>Jumlah Dokumen per checker : jam kerja checker Diluar Jam Lembur</td>
+                  <td>15 dok / jam</td>
+                  <td>
+                    <div class="badge rounded-pill text-white bg-danger p-2 text-uppercase px-3">
+                      40</div>
+                  </td>
+                  <td><button type="button" class="btn btn-planet btn-sm radius-30 px-4" data-bs-toggle="modal"
+                      data-bs-target="#modalViewDetail">View
+                      Details</button></td>
+                </tr>
+                <tr style="color:#ffffff; background-color: rgba(34,34,34,0.5);">
+                  <td>3</td>
+                  <td>Stock Accuracy</td>
+                  <td>Akurasi Hasil Cycle Count & Opname Stock</td>
+                  <td>100%</td>
+                  <td>
+                    <div class="badge rounded-pill text-black bg-warning p-2 text-uppercase px-3">
+                      50</div>
+                  </td>
+                  <td><button type="button" class="btn btn-planet btn-sm radius-30 px-4" data-bs-toggle="modal"
+                      data-bs-target="#modalViewDetail">View
+                      Details</button></td>
+                </tr>
+                <tr style="color:#ffffff; background-color: rgba(34,34,34,0.5);">
+                  <td>4</td>
+                  <td>5R</td>
+                  <td>Point Excellent</td>
+                  <td>360</td>
+                  <td>
+                    <div class="badge rounded-pill text-white bg-info p-2 text-uppercase px-3">
+                      70</div>
+                  </td>
+                  <td><button type="button" class="btn btn-planet btn-sm radius-30 px-4" data-bs-toggle="modal"
+                      data-bs-target="#modalViewDetail">View
+                      Details</button></td>
+                </tr>
+              </tbody>
+              <tfoot style="color:#ffffff; background-color: rgba(0,0,0,0.5);">
+                <tr>
+                  <th>No</th>
+                  <th>Activities</th>
+                  <th>Measurement</th>
+                  <th>Target</th>
+                  <th>Score</th>
+                  <th>Detail</th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <hr class="mb-4" style="border: 1px solid rgb(255, 255, 255 );" />
+          <div class="table-responsive">
+            <table id="tableReport" class="table mb-0 align-middle">
+              <thead style="color:#ffffff; background-color: rgba(0,0,0,0.5);">
+                <tr>
+                  <th>No</th>
+                  <th>Post Test</th>
+                  <th class="text-center">Attempt</th>
+                  <th class="text-center">Passing Score</th>
+                  <th class="text-center">Score</th>
+                  <th class="text-center">Status</th>
+                  <th class="text-center">Detail</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="color:#ffffff; background-color: rgba(34,34,34,0.5);">
+                  <td>1</td>
+                  <td>Checker Outbound</td>
+                  <td class="text-center">2</td>
+                  <td class="text-center">75</td>
+                  <td class="text-center">
+                    <div class="badge rounded-pill text-white bg-success p-2 text-uppercase px-3">
+                      80</div>
+                  </td>
+                  <td class="text-center">
+                    <div class="badge rounded-pill text-white bg-success p-2 text-uppercase px-3">
+                      Lulus</div>
+                  </td>
+                  <td class="text-center"><button type="button" class="btn btn-planet btn-sm radius-30 px-4"
+                      data-bs-toggle="modal" data-bs-target="#modalViewDetail">View
+                      Details</button></td>
+                </tr>
+              </tbody>
+              <tfoot style="color:#ffffff; background-color: rgba(0,0,0,0.5);">
+                <tr>
+                  <th>No</th>
+                  <th>Post Test</th>
+                  <th class="text-center">Attempt</th>
+                  <th class="text-center">Passing Score</th>
+                  <th class="text-center">Score</th>
+                  <th class="text-center">Status</th>
+                  <th class="text-center">Detail</th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div id="transporter" class="card card-mini-simulator py-3 px-2 mb-4">
+        <div class="card-header">
+          <h5 class="text-white text-center">Transporter</h5>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive mb-4">
+            <table id="tableReport" class="table mb-0 align-middle">
+              <thead style="color:#ffffff; background-color: rgba(0,0,0,0.5);">
+                <tr>
+                  <th>No</th>
+                  <th>Activities</th>
+                  <th>Measurement</th>
+                  <th>Target</th>
+                  <th>Score</th>
+                  <th>Detail</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="color:#ffffff; background-color: rgba(34,34,34,0.5);">
+                  <td>1</td>
+                  <td>Replenishment</td>
+                  <td>Jumlah pengambilan pick slot - Level A- E [ picking ]</td>
+                  <td>100%</td>
+                  <td>
+                    <div class="badge rounded-pill text-white bg-success p-2 text-uppercase px-3">
+                      80</div>
+                  </td>
+                  <td><button type="button" class="btn btn-planet btn-sm radius-30 px-4" data-bs-toggle="modal"
+                      data-bs-target="#modalViewDetail">View
+                      Details</button></td>
+                </tr>
+                <tr style="color:#ffffff; background-color: rgba(34,34,34,0.5);">
+                  <td>2</td>
+                  <td>Accuracy Stock</td>
+                  <td>Akurasi proses putaway & replenishment </td>
+                  <td>100%</td>
+                  <td>
+                    <div class="badge rounded-pill text-white bg-danger p-2 text-uppercase px-3">
+                      40</div>
+                  </td>
+                  <td><button type="button" class="btn btn-planet btn-sm radius-30 px-4" data-bs-toggle="modal"
+                      data-bs-target="#modalViewDetail">View
+                      Details</button></td>
+                </tr>
+                <tr style="color:#ffffff; background-color: rgba(34,34,34,0.5);">
+                  <td>3</td>
+                  <td>Putaway</td>
+                  <td>Selesai Bongkar - Receipt ke Sub Inv Good ( Siap Jual ) ≤ 24 Jam</td>
+                  <td>100%</td>
+                  <td>
+                    <div class="badge rounded-pill text-black bg-warning p-2 text-uppercase px-3">
+                      50</div>
+                  </td>
+                  <td><button type="button" class="btn btn-planet btn-sm radius-30 px-4" data-bs-toggle="modal"
+                      data-bs-target="#modalViewDetail">View
+                      Details</button></td>
+                </tr>
+                <tr style="color:#ffffff; background-color: rgba(34,34,34,0.5);">
+                  <td>4</td>
+                  <td>5R</td>
+                  <td>Point Excellent</td>
+                  <td>360</td>
+                  <td>
+                    <div class="badge rounded-pill text-white bg-info p-2 text-uppercase px-3">
+                      70</div>
+                  </td>
+                  <td><button type="button" class="btn btn-planet btn-sm radius-30 px-4" data-bs-toggle="modal"
+                      data-bs-target="#modalViewDetail">View
+                      Details</button></td>
+                </tr>
+              </tbody>
+              <tfoot style="color:#ffffff; background-color: rgba(0,0,0,0.5);">
+                <tr>
+                  <th>No</th>
+                  <th>Activities</th>
+                  <th>Measurement</th>
+                  <th>Target</th>
+                  <th>Score</th>
+                  <th>Detail</th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <hr class="mb-4" style="border: 1px solid rgb(255, 255, 255 );" />
+          <div class="table-responsive">
+            <table id="tableReport" class="table mb-0 align-middle">
+              <thead style="color:#ffffff; background-color: rgba(0,0,0,0.5);">
+                <tr>
+                  <th>No</th>
+                  <th>Post Test</th>
+                  <th class="text-center">Attempt</th>
+                  <th class="text-center">Passing Score</th>
+                  <th class="text-center">Score</th>
+                  <th class="text-center">Status</th>
+                  <th class="text-center">Detail</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="color:#ffffff; background-color: rgba(34,34,34,0.5);">
+                  <td>1</td>
+                  <td>Transporter</td>
+                  <td class="text-center">2</td>
+                  <td class="text-center">75</td>
+                  <td class="text-center">
+                    <div class="badge rounded-pill text-white bg-success p-2 text-uppercase px-3">
+                      80</div>
+                  </td>
+                  <td class="text-center">
+                    <div class="badge rounded-pill text-white bg-success p-2 text-uppercase px-3">
+                      Lulus</div>
+                  </td>
+                  <td class="text-center"><button type="button" class="btn btn-planet btn-sm radius-30 px-4"
+                      data-bs-toggle="modal" data-bs-target="#modalViewDetail">View
+                      Details</button></td>
+                </tr>
+              </tbody>
+              <tfoot style="color:#ffffff; background-color: rgba(0,0,0,0.5);">
+                <tr>
+                  <th>No</th>
+                  <th>Post Test</th>
+                  <th class="text-center">Attempt</th>
+                  <th class="text-center">Passing Score</th>
+                  <th class="text-center">Score</th>
+                  <th class="text-center">Status</th>
+                  <th class="text-center">Detail</th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div id="petRetur" class="card card-mini-simulator py-3 px-2 mb-4">
+        <div class="card-header">
+          <h5 class="text-white text-center">Pet Retur</h5>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive mb-4">
+            <table id="tableReport" class="table mb-0 align-middle">
+              <thead style="color:#ffffff; background-color: rgba(0,0,0,0.5);">
+                <tr>
+                  <th>No</th>
+                  <th>Activities</th>
+                  <th>Measurement</th>
+                  <th>Target</th>
+                  <th>Score</th>
+                  <th>Detail</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="color:#ffffff; background-color: rgba(34,34,34,0.5);">
+                  <td>1</td>
+                  <td>Accuracy</td>
+                  <td>Akurasi Penerimaan barang retur</td>
+                  <td>100%</td>
+                  <td>
+                    <div class="badge rounded-pill text-white bg-success p-2 text-uppercase px-3">
+                      80</div>
+                  </td>
+                  <td><button type="button" class="btn btn-planet btn-sm radius-30 px-4" data-bs-toggle="modal"
+                      data-bs-target="#modalViewDetail">View
+                      Details</button></td>
+                </tr>
+                <tr style="color:#ffffff; background-color: rgba(34,34,34,0.5);">
+                  <td>2</td>
+                  <td>Accuracy</td>
+                  <td>Akurasi Retur ke Pusat</td>
+                  <td>100%</td>
+                  <td>
+                    <div class="badge rounded-pill text-white bg-danger p-2 text-uppercase px-3">
+                      40</div>
+                  </td>
+                  <td><button type="button" class="btn btn-planet btn-sm radius-30 px-4" data-bs-toggle="modal"
+                      data-bs-target="#modalViewDetail">View
+                      Details</button></td>
+                </tr>
+                <tr style="color:#ffffff; background-color: rgba(34,34,34,0.5);">
+                  <td>3</td>
+                  <td>Kecepatan Pembuatan LBR</td>
+                  <td>Sub Inv BAD Nol Setiap Akhir bulan</td>
+                  <td>100%</td>
+                  <td>
+                    <div class="badge rounded-pill text-black bg-warning p-2 text-uppercase px-3">
+                      50</div>
+                  </td>
+                  <td><button type="button" class="btn btn-planet btn-sm radius-30 px-4" data-bs-toggle="modal"
+                      data-bs-target="#modalViewDetail">View
+                      Details</button></td>
+                </tr>
+                <tr style="color:#ffffff; background-color: rgba(34,34,34,0.5);">
+                  <td>4</td>
+                  <td>5R</td>
+                  <td>Point Excellent</td>
+                  <td>360</td>
+                  <td>
+                    <div class="badge rounded-pill text-white bg-info p-2 text-uppercase px-3">
+                      70</div>
+                  </td>
+                  <td><button type="button" class="btn btn-planet btn-sm radius-30 px-4" data-bs-toggle="modal"
+                      data-bs-target="#modalViewDetail">View
+                      Details</button></td>
+                </tr>
+              </tbody>
+              <tfoot style="color:#ffffff; background-color: rgba(0,0,0,0.5);">
+                <tr>
+                  <th>No</th>
+                  <th>Activities</th>
+                  <th>Measurement</th>
+                  <th>Target</th>
+                  <th>Score</th>
+                  <th>Detail</th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <hr class="mb-4" style="border: 1px solid rgb(255, 255, 255 );" />
+          <div class="table-responsive">
+            <table id="tableReport" class="table mb-0 align-middle">
+              <thead style="color:#ffffff; background-color: rgba(0,0,0,0.5);">
+                <tr>
+                  <th>No</th>
+                  <th>Post Test</th>
+                  <th class="text-center">Attempt</th>
+                  <th class="text-center">Passing Score</th>
+                  <th class="text-center">Score</th>
+                  <th class="text-center">Status</th>
+                  <th class="text-center">Detail</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="color:#ffffff; background-color: rgba(34,34,34,0.5);">
+                  <td>1</td>
+                  <td>Pet Retur</td>
+                  <td class="text-center">2</td>
+                  <td class="text-center">75</td>
+                  <td class="text-center">
+                    <div class="badge rounded-pill text-white bg-success p-2 text-uppercase px-3">
+                      80</div>
+                  </td>
+                  <td class="text-center">
+                    <div class="badge rounded-pill text-white bg-success p-2 text-uppercase px-3">
+                      Lulus</div>
+                  </td>
+                  <td class="text-center"><button type="button" class="btn btn-planet btn-sm radius-30 px-4"
+                      data-bs-toggle="modal" data-bs-target="#modalViewDetail">View
+                      Details</button></td>
+                </tr>
+              </tbody>
+              <tfoot style="color:#ffffff; background-color: rgba(0,0,0,0.5);">
+                <tr>
+                  <th>No</th>
+                  <th>Post Test</th>
+                  <th class="text-center">Attempt</th>
+                  <th class="text-center">Passing Score</th>
+                  <th class="text-center">Score</th>
+                  <th class="text-center">Status</th>
+                  <th class="text-center">Detail</th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div id="picker" class="card card-mini-simulator py-3 px-2 mb-4">
+        <div class="card-header">
+          <h5 class="text-white text-center">Picker</h5>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive mb-4">
+            <table id="tableReport" class="table mb-0 align-middle">
+              <thead style="color:#ffffff; background-color: rgba(0,0,0,0.5);">
+                <tr>
+                  <th>No</th>
+                  <th>Activities</th>
+                  <th>Measurement</th>
+                  <th>Target</th>
+                  <th>Score</th>
+                  <th>Detail</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="color:#ffffff; background-color: rgba(34,34,34,0.5);">
+                  <td>1</td>
+                  <td>Picking</td>
+                  <td>Jumlah Task per Picker : Jam kerja Picker
+                    Diluar Jam Lembur</td>
+                  <td>30 task / Hours</td>
+                  <td>
+                    <div class="badge rounded-pill text-white bg-success p-2 text-uppercase px-3">
+                      80</div>
+                  </td>
+                  <td><button type="button" class="btn btn-planet btn-sm radius-30 px-4" data-bs-toggle="modal"
+                      data-bs-target="#modalViewDetail">View
+                      Details</button></td>
+                </tr>
+                <tr style="color:#ffffff; background-color: rgba(34,34,34,0.5);">
+                  <td>2</td>
+                  <td>Picking</td>
+                  <td>Jumlah Dokumen per Picker : jam kerja Picker
+                    Diluar Jam Lembur</td>
+                  <td>8 dok / Hours</td>
+                  <td>
+                    <div class="badge rounded-pill text-white bg-danger p-2 text-uppercase px-3">
+                      40</div>
+                  </td>
+                  <td><button type="button" class="btn btn-planet btn-sm radius-30 px-4" data-bs-toggle="modal"
+                      data-bs-target="#modalViewDetail">View
+                      Details</button></td>
+                </tr>
+                <tr style="color:#ffffff; background-color: rgba(34,34,34,0.5);">
+                  <td>3</td>
+                  <td>Accuracy</td>
+                  <td>Accuracy Stock ( sesuai area tanggung jawab )</td>
+                  <td>100%</td>
+                  <td>
+                    <div class="badge rounded-pill text-black bg-warning p-2 text-uppercase px-3">
+                      50</div>
+                  </td>
+                  <td><button type="button" class="btn btn-planet btn-sm radius-30 px-4" data-bs-toggle="modal"
+                      data-bs-target="#modalViewDetail">View
+                      Details</button></td>
+                </tr>
+                <tr style="color:#ffffff; background-color: rgba(34,34,34,0.5);">
+                  <td>4</td>
+                  <td>OTP</td>
+                  <td>OTP ALL ZONA </td>
+                  <td>100%</td>
+                  <td>
+                    <div class="badge rounded-pill text-white bg-info p-2 text-uppercase px-3">
+                      70</div>
+                  </td>
+                  <td><button type="button" class="btn btn-planet btn-sm radius-30 px-4" data-bs-toggle="modal"
+                      data-bs-target="#modalViewDetail">View
+                      Details</button></td>
+                </tr>
+                <tr style="color:#ffffff; background-color: rgba(34,34,34,0.5);">
+                  <td>5</td>
+                  <td>5R</td>
+                  <td>Point Excellent</td>
+                  <td>360</td>
+                  <td>
+                    <div class="badge rounded-pill text-white bg-info p-2 text-uppercase px-3">
+                      70</div>
+                  </td>
+                  <td><button type="button" class="btn btn-planet btn-sm radius-30 px-4" data-bs-toggle="modal"
+                      data-bs-target="#modalViewDetail">View
+                      Details</button></td>
+                </tr>
+              </tbody>
+              <tfoot style="color:#ffffff; background-color: rgba(0,0,0,0.5);">
+                <tr>
+                  <th>No</th>
+                  <th>Activities</th>
+                  <th>Measurement</th>
+                  <th>Target</th>
+                  <th>Score</th>
+                  <th>Detail</th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <hr class="mb-4" style="border: 1px solid rgb(255, 255, 255 );" />
+          <div class="table-responsive">
+            <table id="tableReport" class="table mb-0 align-middle">
+              <thead style="color:#ffffff; background-color: rgba(0,0,0,0.5);">
+                <tr>
+                  <th>No</th>
+                  <th>Post Test</th>
+                  <th class="text-center">Attempt</th>
+                  <th class="text-center">Passing Score</th>
+                  <th class="text-center">Score</th>
+                  <th class="text-center">Status</th>
+                  <th class="text-center">Detail</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="color:#ffffff; background-color: rgba(34,34,34,0.5);">
+                  <td>1</td>
+                  <td>Pet Retur</td>
+                  <td class="text-center">2</td>
+                  <td class="text-center">75</td>
+                  <td class="text-center">
+                    <div class="badge rounded-pill text-white bg-success p-2 text-uppercase px-3">
+                      80</div>
+                  </td>
+                  <td class="text-center">
+                    <div class="badge rounded-pill text-white bg-success p-2 text-uppercase px-3">
+                      Lulus</div>
+                  </td>
+                  <td class="text-center"><button type="button" class="btn btn-planet btn-sm radius-30 px-4"
+                      data-bs-toggle="modal" data-bs-target="#modalViewDetail">View
+                      Details</button></td>
+                </tr>
+              </tbody>
+              <tfoot style="color:#ffffff; background-color: rgba(0,0,0,0.5);">
+                <tr>
+                  <th>No</th>
+                  <th>Post Test</th>
+                  <th class="text-center">Attempt</th>
+                  <th class="text-center">Passing Score</th>
+                  <th class="text-center">Score</th>
+                  <th class="text-center">Status</th>
+                  <th class="text-center">Detail</th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div id="whsAdministration" class="card card-mini-simulator py-3 px-2 mb-4">
+        <div class="card-header">
+          <h5 class="text-white text-center">Whs Administration</h5>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive mb-4">
+            <table id="tableReport" class="table mb-0 align-middle">
+              <thead style="color:#ffffff; background-color: rgba(0,0,0,0.5);">
+                <tr>
+                  <th>No</th>
+                  <th>Activities</th>
+                  <th>Measurement</th>
+                  <th>Target</th>
+                  <th>Score</th>
+                  <th>Detail</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="color:#ffffff; background-color: rgba(34,34,34,0.5);">
+                  <td>1</td>
+                  <td>Inbound Cycle Time</td>
+                  <td>Proses Receipt Penerimaan Barang dari DC / Cab Lain / Batal DO / Kembali <br> Kanvas ≤ 24 Jam</td>
+                  <td>HIT 100%</td>
+                  <td>
+                    <div class="badge rounded-pill text-white bg-success p-2 text-uppercase px-3">
+                      80</div>
+                  </td>
+                  <td><button type="button" class="btn btn-planet btn-sm radius-30 px-4" data-bs-toggle="modal"
+                      data-bs-target="#modalViewDetail">View
+                      Details</button></td>
+                </tr>
+                <tr style="color:#ffffff; background-color: rgba(34,34,34,0.5);">
+                  <td>2</td>
+                  <td>Return Cyle Time</td>
+                  <td>TTRS sampai dengan Faktur CN kurang dari 7 Hari</td>
+                  <td>HIT 100%</td>
+                  <td>
+                    <div class="badge rounded-pill text-white bg-danger p-2 text-uppercase px-3">
+                      40</div>
+                  </td>
+                  <td><button type="button" class="btn btn-planet btn-sm radius-30 px-4" data-bs-toggle="modal"
+                      data-bs-target="#modalViewDetail">View
+                      Details</button></td>
+                </tr>
+                <tr style="color:#ffffff; background-color: rgba(34,34,34,0.5);">
+                  <td>3</td>
+                  <td>Outstanding BDP Kirim</td>
+                  <td>Pengiriman dokumen / fisik barang ke DC / Cab lain tidak ada yang <br> outstanding ≥ 1 bulan </td>
+                  <td>HIT 100%</td>
+                  <td>
+                    <div class="badge rounded-pill text-black bg-warning p-2 text-uppercase px-3">
+                      50</div>
+                  </td>
+                  <td><button type="button" class="btn btn-planet btn-sm radius-30 px-4" data-bs-toggle="modal"
+                      data-bs-target="#modalViewDetail">View
+                      Details</button></td>
+                </tr>
+                <tr style="color:#ffffff; background-color: rgba(34,34,34,0.5);">
+                  <td>4</td>
+                  <td>5R</td>
+                  <td>Point Excellent</td>
+                  <td>360</td>
+                  <td>
+                    <div class="badge rounded-pill text-white bg-info p-2 text-uppercase px-3">
+                      70</div>
+                  </td>
+                  <td><button type="button" class="btn btn-planet btn-sm radius-30 px-4" data-bs-toggle="modal"
+                      data-bs-target="#modalViewDetail">View
+                      Details</button></td>
+                </tr>
+              </tbody>
+              <tfoot style="color:#ffffff; background-color: rgba(0,0,0,0.5);">
+                <tr>
+                  <th>No</th>
+                  <th>Activities</th>
+                  <th>Measurement</th>
+                  <th>Target</th>
+                  <th>Score</th>
+                  <th>Detail</th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <hr class="mb-4" style="border: 1px solid rgb(255, 255, 255 );" />
+          <div class="table-responsive">
+            <table id="tableReport" class="table mb-0 align-middle">
+              <thead style="color:#ffffff; background-color: rgba(0,0,0,0.5);">
+                <tr>
+                  <th>No</th>
+                  <th>Post Test</th>
+                  <th class="text-center">Attempt</th>
+                  <th class="text-center">Passing Score</th>
+                  <th class="text-center">Score</th>
+                  <th class="text-center">Status</th>
+                  <th class="text-center">Detail</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="color:#ffffff; background-color: rgba(34,34,34,0.5);">
+                  <td>1</td>
+                  <td>Whs Administration</td>
+                  <td class="text-center">2</td>
+                  <td class="text-center">75</td>
+                  <td class="text-center">
+                    <div class="badge rounded-pill text-white bg-success p-2 text-uppercase px-3">
+                      80</div>
+                  </td>
+                  <td class="text-center">
+                    <div class="badge rounded-pill text-white bg-success p-2 text-uppercase px-3">
+                      Lulus</div>
+                  </td>
+                  <td class="text-center"><button type="button" class="btn btn-planet btn-sm radius-30 px-4"
+                      data-bs-toggle="modal" data-bs-target="#modalViewDetail">View
+                      Details</button></td>
+                </tr>
+              </tbody>
+              <tfoot style="color:#ffffff; background-color: rgba(0,0,0,0.5);">
+                <tr>
+                  <th>No</th>
+                  <th>Post Test</th>
+                  <th class="text-center">Attempt</th>
+                  <th class="text-center">Passing Score</th>
+                  <th class="text-center">Score</th>
+                  <th class="text-center">Status</th>
+                  <th class="text-center">Detail</th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal View Detail -->
+    <div class="modal fade" id="modalViewDetail" tabindex="-1" aria-labelledby="modalViewDetailLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modalViewDetailLabel">Detail</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <h6 class="text-black">Attachment</h5>
+                <a href="" class="text-paragraph text-blue"><i class="fa fa-download"></i>
+                  Download</a>
+            </div>
+
+            <div class="mb-3">
+              <h6 class="text-black">Notes</h6>
+              <p class="text-paragraph text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+                recusandae ipsam,
+                accusamus quos officiis delectus eius molestiae voluptatum eligendi repellat eum exercitationem earum
+                minus ipsa commodi doloremque, possimus reprehenderit nulla?</p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer class="section-footer mt-5 mb-4 border-top text-center">
+
+    <div class="container-fluid">
+      <div class="row border-top justify-content-center align-items-center pt-4">
+        <div class="col-auto font-weight-light" style="color: #ffffff">
+          2022 Copyright My Planet Enseval • All rights reserved • Made in
+          Jakarta
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+  <script src="assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
+  <script src="assets/plugins/datatable/js/dataTables.bootstrap5.min.js"></script>
+  <script src="js/collapse-learning.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script src="js/floating-btn.js"></script>
+  <script src="js/reportCategory.js"></script>
+  <script src="js/submenu-profile.js"></script>
+  <script>
+    const cards = document.querySelectorAll('.card-mini-simulator');
+    const numPages = cards.length;
+
+    function displayPage(pageIndex) {
+      for (let i = 0; i < numPages; i++) {
+        cards[i].style.display = i === pageIndex ? 'block' : 'none';
+      }
+      updateActiveButton(pageIndex);
+    }
+
+    function updateActiveButton(pageIndex) {
+      const buttons = document.querySelectorAll('#paginationReportUser button');
+      for (let i = 0; i < numPages; i++) {
+        buttons[i].classList.toggle('active', i === pageIndex);
+      }
+    }
+
+    for (let i = 0; i < numPages; i++) {
+      const button = document.createElement('button');
+      button.innerText = `${i + 1}`;
+      button.onclick = () => displayPage(i);
+      document.getElementById('paginationReportUser').appendChild(button);
+    }
+
+    displayPage(0); // show the first page by default
+  </script>
+  <!-- <script>
+    $(document).ready(function () {
+      $('#tableReport').DataTable({
+        dom: '<"row top"<"col-lg-6 col-md-6 col-sm-12 mb-2"l><"col-lg-6 col-md-6 col-sm-12 mb-2"f>>rtip'
+      });
+    });
+  </script> -->
+</body>
+
+</html>
