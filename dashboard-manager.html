@@ -330,92 +330,109 @@
       </div>
     </div>
     <!-- End Row -->
-    <div class="d-flex justify-content-center mb-3">
-      <button type="button" class="btn btn-custom-show">
+    <div class="d-flex justify-content-center mb-5">
+      <a href="report-mentor.html" type="button" class="btn btn-custom-show">
         See All
         <i class="fa fa-arrow-right ms-2"></i>
-      </button>
+      </a>
     </div>
 
-    <div class="row mb-3">
-      <div class="col-lg-6 col-md-12 col-sm-12 mb-3">
-        <div class="card card-mini-simulator">
-          <div class="card-header text-center">
-            <h6 class="text-white">E-learning</h6>
-          </div>
-          <div class="card-body">
-            <div class="row">
-              <div class="col-lg-6 col-md-12 col-sm-12">
-                <div class="card card-learning" style="margin-bottom: 0px;">
-                  <a href="e-learning-neopgeneral.html"><img src="images/Cover-Neop-General_min.png"
-                      class="card-img-top py-2 px-2" alt="..." /></a>
-                  <!-- Badge Course -->
-                  <!-- <div class="badge badge-course-success rounded-pill text-uppercase py-1">
-                    <i class="fa fa-check me-1"></i>Completed
-                  </div> -->
-                  <!-- End Badge Course -->
-                  <div class="card-body">
-                    <h5 class="card-title-learning">
-                      <a href="e-learning-neopgeneral.html" style="display: block;
-                      width: 120px;
-                      white-space: nowrap;
-                      overflow: hidden;
-                      text-overflow: ellipsis;">MSBW</a>
-                    </h5>
-                    <div class="row">
-                      <div class="col">
-                        <p class="card-text-learning">
-                          <img src="assets/lesson.png" alt="" class="" />
-                          6 Lesson
-                        </p>
-                      </div>
-                      <div class="col">
-                        <a href="e-learning-neopgeneral.html" class="btn-go">
-                          <img src="assets/arrow-right.svg" alt="" class="" />
-                        </a>
-                        <!-- <a href="#" class="btn btn-go">Go</a> -->
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6 col-md-12 col-sm-12">
-                <div class="row mb-3 mt-3 mt-lg-0">
-                  <div class="col-lg-8 col-md-12 col-sm-12">
-                    <!-- Badge Course -->
-                    <div class="badge badge-course-success rounded-pill text-uppercase py-1" style="display: block;">
-                      <i class="fa fa-check me-1"></i>Active
-                    </div>
-                    <!-- End Badge Course -->
-                  </div>
-                </div>
-                <h6 class="text-white">MSBW</h6>
-                <p class="text-paragraph">Selamat datang di materi e-learning MSBW. Pada e-learning ini, kita akan
-                  membahas dasar-dasar operasi gudang dan memberikan Anda
-                  keterampilan yang diperlukan untuk menjadi karyawan yang efektif dan efisien. E-learning ini terdiri
-                  dari
-                  beberapa modul yang dapat Anda pelajari secara mandiri, dan setiap modul akan diikuti dengan kuis
-                  untuk memastikan Anda memahami materi.</p>
-
-              </div>
-            </div>
-            <!-- <div class="row align-items-center">
-              <div class="col-lg-11 col-md-11 col-sm-10">
-                <div class="progress bg-white-2 radius-10" style="height:4.5px;">
-                  <div class="progress-bar bg-white" role="progressbar" style="width: 80%"></div>
-                </div>
-              </div>
-              <div class="col-lg-1 col-md-1 col-sm-2">
-                <p class="text-paragraph mt-3"><span>5</span>/7</p>
-              </div>
-            </div> -->
+    <div class="card card-mini-simulator dark-theme mb-5">
+      <div class="card-header row align-items-center mt-3">
+        <div class="col-lg-6 col-md-12 col-sm-12">
+          <h6 class="text-white">Training Participant</h6>
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+          <div class="mb-3">
+            <select id="selectTrainingParticipant">
+              <option value="ParticipantBarat">Regional Barat</option>
+              <option value="ParticipantTengah">Regional Tengah</option>
+              <option value="ParticipantTimur">Regional Timur</option>
+            </select>
           </div>
         </div>
       </div>
-      <div class="col-lg-6 col-md-12 col-sm-12">
-
+      <div class="card-body">
+        <div id="participant-ParticipantBarat" class="participant"></div>
+        <div id="participant-ParticipantTengah" class="participant" style="display: none;"></div>
+        <div id="participant-ParticipantTimur" class="participant" style="display: none;"></div>
       </div>
     </div>
+
+    <div class="card card-mini-simulator mb-4 p-3">
+      <div class="card-header text-center">
+        <h6 class="text-white">E-learning</h6>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-lg-3 col-md-12 col-sm-12">
+            <div class="card card-learning" style="margin-bottom: 0px;">
+              <a href="e-learning-neopgeneral.html"><img src="images/Cover-Neop-General_min.png"
+                  class="card-img-top py-2 px-2" alt="..." /></a>
+              <!-- Badge Course -->
+              <!-- <div class="badge badge-course-success rounded-pill text-uppercase py-1">
+                <i class="fa fa-check me-1"></i>Completed
+              </div> -->
+              <!-- End Badge Course -->
+              <div class="card-body">
+                <h5 class="card-title-learning">
+                  <a href="e-learning-neopgeneral.html" style="display: block;
+                  width: 120px;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;">MSBW</a>
+                </h5>
+                <div class="row">
+                  <div class="col">
+                    <p class="card-text-learning">
+                      <img src="assets/lesson.png" alt="" class="" />
+                      6 Lesson
+                    </p>
+                  </div>
+                  <div class="col">
+                    <a href="e-learning-neopgeneral.html" class="btn-go">
+                      <img src="assets/arrow-right.svg" alt="" class="" />
+                    </a>
+                    <!-- <a href="#" class="btn btn-go">Go</a> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-9 col-md-12 col-sm-12">
+            <div class="row mb-3 mt-3 mt-lg-0">
+              <div class="col-lg-8 col-md-12 col-sm-12">
+                <!-- Badge Course -->
+                <div class="badge badge-course-success rounded-pill text-uppercase py-1">
+                  <i class="fa fa-check me-1"></i>Active
+                </div>
+                <!-- End Badge Course -->
+              </div>
+            </div>
+            <h6 class="text-white">MSBW</h6>
+            <p class="text-paragraph">Selamat datang di materi e-learning MSBW. Pada e-learning ini, kita akan
+              membahas dasar-dasar operasi gudang dan memberikan Anda
+              keterampilan yang diperlukan untuk menjadi karyawan yang efektif dan efisien. E-learning ini terdiri
+              dari
+              beberapa modul yang dapat Anda pelajari secara mandiri, dan setiap modul akan diikuti dengan kuis
+              untuk memastikan Anda memahami materi.</p>
+
+          </div>
+        </div>
+        <!-- <div class="row align-items-center">
+          <div class="col-lg-11 col-md-11 col-sm-10">
+            <div class="progress bg-white-2 radius-10" style="height:4.5px;">
+              <div class="progress-bar bg-white" role="progressbar" style="width: 80%"></div>
+            </div>
+          </div>
+          <div class="col-lg-1 col-md-1 col-sm-2">
+            <p class="text-paragraph mt-3"><span>5</span>/7</p>
+          </div>
+        </div> -->
+      </div>
+    </div>
+
+
 
   </div>
 
@@ -459,7 +476,9 @@
   <script src="assets/plugins/highcharts/js/exporting.js"></script>
   <script src="assets/plugins/highcharts/js/export-data.js"></script>
   <script src="assets/plugins/highcharts/js/accessibility.js"></script>
-  <script src="assets/plugins/highcharts/js/highcharts-custom.script.js"></script>
+  <!-- <script src="assets/plugins/highcharts/js/highcharts-custom.script.js"></script> -->
+  <script src="assets/plugins/highcharts/js/chart-manager.script.js"></script>
+
 
   <script src="js/floating-btn.js"></script>
   <script src="js/submenu-profile.js"></script>
@@ -505,6 +524,29 @@
 
         $('.level').each(function () {
           if ($(this).attr('id') === 'level-' + selectedOption) {
+            $(this).show();
+          } else {
+            $(this).hide();
+          }
+        });
+      });
+    });
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      $('#selectTrainingParticipant').select2({
+        theme: 'bootstrap4',
+        width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
+        placeholder: $(this).data('placeholder'),
+        allowClear: Boolean($(this).data('allow-clear')),
+      });
+
+      $('#selectTrainingParticipant').on('change', function () {
+        var selectedOption = $(this).val();
+
+        $('.participant').each(function () {
+          if ($(this).attr('id') === 'participant-' + selectedOption) {
             $(this).show();
           } else {
             $(this).hide();

@@ -402,6 +402,58 @@
 
         </div>
       </div>
+
+      <div class="card card-mini-simulator mb-5">
+        <div class="card-header py-3">
+          <h6 class="text-white text-center">Attitude Assessment</h6>
+        </div>
+        <div class="card-body">
+
+          <div class="activity-evaluation">
+            <div class="d-flex row mb-2">
+              <div class="col-8 evaluation">
+                <p class="text-paragraph mb-0"><span class="number-form">1. </span><span
+                    class="activities-form">Attitude</span></p>
+              </div>
+              <div class="col-4 guideline" style="text-align: end;">
+                <a data-bs-toggle="modal" data-bs-target="#modalGuideline" type="button"
+                  class="text-white text-paragraph">Guideline
+                  <span style="color: #ffc107"><i class="fa fa-exclamation-circle ms-1 font-18"></i></span></a>
+              </div>
+            </div>
+            <p class="text-paragraph"><span class="measurement-form">Attitude employee selama mengikuti training mini
+                simulator </span></p>
+            <!-- Slider -->
+            <div class="slider-container d-flex align-items-center mb-3">
+              <input type="range" min="0" max="100" value="50" class="slider slider-form" id="myRange">
+              <input type="number" min="0" max="100" value="50" class="slider-value" id="slider-value">
+            </div>
+            <!-- end Slider -->
+            <div class="row">
+              <div class="col-lg-9 col-md-9 col-sm-12">
+                <div class="mb-3 notes-evaluation">
+                  <label for="formNotes" class="form-label text-paragraph">Notes</label>
+                  <textarea class="form-control text-paragraph text-black" id="formNotes" rows="3"></textarea>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-12">
+                <div class="mb-3">
+                  <label for="formFile" class="form-label text-paragraph">Upload Attachment</label>
+                  <input class="form-control text-paragraph text-black" type="file" id="formFile">
+                </div>
+              </div>
+            </div>
+            <hr style="border: 2px solid #ffffff; border-radius: 20px;">
+          </div>
+
+        </div>
+      </div>
+
+      <a type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalSubmitEvaluation"
+        style="display: block;">
+        Submit
+      </a>
+
     </div>
 
     <!-- Modal Guideline -->
@@ -467,20 +519,20 @@
   </section>
 
   <!-- Modal Approve Validation -->
-  <div class="modal fade" id="modalApproveValidation" tabindex="-1" aria-labelledby="modalApproveValidationLabel"
+  <div class="modal fade" id="modalSubmitEvaluation" tabindex="-1" aria-labelledby="modalSubmitEvaluationLabel"
     aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content bg-dark">
         <div class="modal-header">
-          <h6 class="modal-title text-white" id="modalApproveValidationLabel">Approve Evaluation</h6>
+          <h6 class="modal-title text-white" id="modalSubmitEvaluationLabel">Evaluation</h6>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body text-paragraph">
-          Are you sure want to approve this evaluation?
+          Are you sure want to submit this evaluation?
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary font-13" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-success font-13">Approve</button>
+          <button type="button" class="btn btn-success font-13">Submit</button>
         </div>
       </div>
     </div>
