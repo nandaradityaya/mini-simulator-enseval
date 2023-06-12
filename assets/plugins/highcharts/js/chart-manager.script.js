@@ -40,6 +40,15 @@ $(function () {
           enabled: true,
           format: "{point.y}",
         },
+        point: {
+          events: {
+            click: function () {
+              if (this.options.url) {
+                window.location.href = this.options.url;
+              }
+            },
+          },
+        },
       },
     },
     tooltip: {
@@ -53,29 +62,40 @@ $(function () {
         colorByPoint: true,
         data: [
           {
-            name: "A",
+            name: "Level 6",
             y: 34,
-            drilldown: "A",
+            drilldown: "Level 6",
+            url: "report-employee.html",
           },
           {
-            name: "B",
+            name: "Level 5",
             y: 12,
-            drilldown: "B",
+            drilldown: "Level 5",
+            url: "https://example.com/b",
           },
           {
-            name: "C",
+            name: "Level 4",
             y: 23,
-            drilldown: "C",
+            drilldown: "Level 4",
+            url: "https://example.com/b",
           },
           {
-            name: "D",
+            name: "Level 3",
             y: 18,
-            drilldown: "D",
+            drilldown: "Level 3",
+            url: "https://example.com/b",
           },
           {
-            name: "E",
+            name: "Level 2",
             y: 24,
-            drilldown: "E",
+            drilldown: "Level 2",
+            url: "https://example.com/c",
+          },
+          {
+            name: "Level 1",
+            y: 24,
+            drilldown: "Level 1",
+            url: "https://example.com/e",
           },
         ],
       },

@@ -176,9 +176,9 @@
   <div class="section-popular-heading mt-5 mb-5">
     <div class="d-flex align-items-center justify-content-center">
       <div class="nav-menu-learning justify-content-center" id="kategoriContainer">
-        <a href="mini-simulator.html" type="button" class="px-3 py-1 active text-decoration-none">Dashboard</a>
+        <a href="dashboard-employee.html" type="button" class="px-3 py-1 active text-decoration-none">Dashboard</a>
         <a href="learning.html" type="button" class="px-3 py-1 text-decoration-none">Learning</a>
-        <a href="report.html" type="button" class="px-3 py-1 text-decoration-none">Report</a>
+        <a href="report-employee.html" type="button" class="px-3 py-1 text-decoration-none">Report</a>
       </div>
       <!-- <div class="position-relative ms-2 mt-2">
         <input type="text" class="form-control ps-5" placeholder="Search" style="
@@ -298,7 +298,7 @@
                         </p>
                       </div>
                       <div class="col">
-                        <a href="e-learning-neopgeneral.html" class="btn-go">
+                        <a class="btn-go" data-bs-toggle="modal" data-bs-target="#modalExistingEmployee">
                           <img src="assets/arrow-right.svg" alt="" class="" />
                         </a>
                         <!-- <a href="#" class="btn btn-go">Go</a> -->
@@ -337,6 +337,28 @@
                 <p class="text-paragraph mt-3"><span>5</span>/7</p>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalExistingEmployee" tabindex="-1" aria-labelledby="modalExistingEmployeeLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content bg-dark">
+          <div class="modal-header">
+            <h5 class="modal-title fs-5" id="modalExistingEmployeeLabel"><i class="fa fa-exclamation-circle me-2"></i>
+              Warning!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-paragraph">
+            Maaf saat ini anda tidak terdaftar sebagai karyawan baru. <br> <br> Silahkan request access jika anda ingin
+            mengakses e-learning ini.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-planet">Request</button>
           </div>
         </div>
       </div>

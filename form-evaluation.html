@@ -261,6 +261,25 @@
               <input type="number" min="0" max="100" value="50" class="slider-value" id="slider-value">
             </div>
             <!-- end Slider -->
+            <div class="d-flex slider-container">
+              <div class="rate">
+                <input required type="radio" id="star5' . $i . '"
+                  name="question' . $question['feedbackQuestionId'] . '-response" value="5" />
+                <label for="star5' . $i . '" title="text">5 stars</label>
+                <input required type="radio" id="star4' . $i . '"
+                  name="question' . $question['feedbackQuestionId'] . '-response" value="4" />
+                <label for="star4' . $i . '" title="text">4 stars</label>
+                <input required type="radio" id="star3' . $i . '"
+                  name="question' . $question['feedbackQuestionId'] . '-response" value="3" />
+                <label for="star3' . $i . '" title="text">3 stars</label>
+                <input required type="radio" id="star2' . $i . '"
+                  name="question' . $question['feedbackQuestionId'] . '-response" value="2" />
+                <label for="star2' . $i . '" title="text">2 stars</label>
+                <input required type="radio" id="star1' . $i . '"
+                  name="question' . $question['feedbackQuestionId'] . '-response" value="1" />
+                <label for="star1' . $i . '" title="text">1 star</label>
+              </div>
+            </div>
             <div class="row">
               <div class="col-lg-9 col-md-9 col-sm-12">
                 <div class="mb-3 notes-evaluation">
