@@ -15,6 +15,119 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    .scrollspy-form {
+      position: fixed;
+      top: 50%;
+      right: 30px;
+      transform: translateY(-50%);
+      z-index: 1000;
+    }
+
+    .scrollspy-form ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .scrollspy-form ul li {
+      /* width: 200px; */
+      position: relative;
+      text-align: right;
+    }
+
+    .scrollspy-form ul li .dot {
+      color: #fff;
+      display: block;
+      padding: 5px 0;
+    }
+
+    .scrollspy-form ul li .dot span {
+      display: inline-block;
+      /* background: #0396a6; */
+      background-color: rgba(112, 112, 112, 0.6);
+      /* letter-spacing: 1px; */
+      padding: 4px 16px;
+      margin-right: 30px;
+      border-radius: 20px;
+      transform: translateX(30px);
+      /* opacity: 0; */
+      flex-wrap: wrap;
+    }
+
+    .scrollspy-form ul li:hover .dot span {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+
+    .scrollspy-form ul li .dot span::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translate(7px, -50%);
+      border-left: 7px solid rgba(112, 112, 112, 0.6);
+      border-top: 7px solid transparent;
+      border-bottom: 7px solid transparent;
+      display: block;
+      color: #ffffff;
+    }
+
+    .scrollspy-form ul li .dot.active span::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translate(7px, -50%);
+      border-left: 7px solid #0396a6;
+      border-top: 7px solid transparent;
+      border-bottom: 7px solid transparent;
+      display: block;
+    }
+
+    .scrollspy-form ul li .dot::before,
+    .scrollspy-form ul li .dot::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      border-radius: 50%;
+      display: block;
+      transition: 0.2s ease-out;
+    }
+
+    .scrollspy-form ul li .dot::before {
+      height: 5px;
+      width: 5px;
+      border: 2px solid #ffffff;
+      right: 0;
+      transform: translateY(-50%);
+    }
+
+    .scrollspy-form ul li .dot.active::before,
+    .scrollspy-form ul li:hover .dot::before {
+      border-color: #ffffff;
+      background: #0396a6;
+    }
+
+    .scrollspy-form ul li .dot::after {
+      height: 15px;
+      width: 15px;
+      border: 2px solid #0396a6;
+      right: -5px;
+      transform: translateY(-50%) scale(0);
+    }
+
+    .scrollspy-form ul li .dot.active::after,
+    .scrollspy-form ul li:hover .dot::after {
+      transform: translateY(-50%) scale(1);
+    }
+
+    .scrollspy-form ul li .active span {
+      transform: translateX(0px);
+      opacity: 1;
+      background: #0396a6;
+    }
+  </style>
 </head>
 
 <body class="body-elearning">
@@ -221,240 +334,68 @@
   <!-- Floating Button -->
   <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
     <img src="assets/ic-arrow-up.png" alt="" width="24" />
-    <!-- <i class="fas fa-arrow-up"
-      ><img src="assets/Arrow up.svg" alt="" width="18"
-    /></i> -->
   </button>
   <!-- Floating Button -->
 
   <nav class="scrollspy-form">
     <ul>
       <li>
-        <a href="#checkerReceiving" class="dot active" data-scroll="checkerReceiving">
+        <a href="#checkerReceiving" class="dot tablinks active" data-scroll="checkerReceiving"
+          onclick="formEvalBtn(event, 'formCheckReceiving')">
           <span>Checker Receiving</span>
         </a>
       </li>
       <li>
-        <a href="#checkerOutbound" class="dot" data-scroll="checkerOutbound">
+        <a href="#checkerOutbound" class="dot tablinks" data-scroll="checkerOutbound"
+          onclick="formEvalBtn(event, 'formCheckOutbound')">
           <span>Checker Outbound</span>
         </a>
       </li>
       <li>
-        <a href="#service" class="dot" data-scroll="service">
+        <a href="#service" class="dot tablinks" data-scroll="service" onclick="formEvalBtn(event, 'formTransporter')">
           <span>service</span>
         </a>
       </li>
       <li>
-        <a href="#project" class="dot" data-scroll="project">
+        <a href="#project" class="dot tablinks" data-scroll="project">
           <span>project</span>
         </a>
       </li>
       <li>
-        <a href="#contact" class="dot" data-scroll="contact">
+        <a href="#contact" class="dot tablinks" data-scroll="contact">
           <span>contact</span>
         </a>
       </li>
     </ul>
   </nav>
 
-  <section class="sec container" id="checkerReceiving">
-    <div class="card card-mini-simulator mb-5">
-      <div class="card-header py-3">
-        <h6 class="text-white text-center">Checker Receiving</h6>
-      </div>
-      <div class="card-body">
-        <div class="activity-evaluation">
-          <div class="d-flex row mb-2">
-            <div class="col-8 evaluation">
-              <p class="text-paragraph mb-0"><span class="number-form">1. </span><span class="activities-form">Queing
-                  Time
-                  Inbound</span></p>
-            </div>
-            <div class="col-4 guideline" style="text-align: end;">
-              <a data-bs-toggle="modal" data-bs-target="#modalGuideline" type="button"
-                class="text-white text-paragraph">Guideline
-                <span style="color: #ffc107"><i class="fa fa-exclamation-circle ms-1 font-18"></i></span></a>
-            </div>
-          </div>
-          <p class="text-paragraph"><span class="measurement-form">Jam Tiba Armada sampai dengan Jam Bongkar ≤ 24
-              Jam</span></p>
-          <!-- Slider -->
-          <div class="slider-container d-flex align-items-center mb-3">
-            <input type="range" min="0" max="100" value="50" class="slider slider-form" id="myRange">
-            <input type="number" min="0" max="100" value="50" class="slider-value" id="slider-value">
-          </div>
-          <!-- end Slider -->
-          <div class="d-flex slider-container">
-            <div class="rate">
-              <input required type="radio" id="star5' . $i . '"
-                name="question' . $question['feedbackQuestionId'] . '-response" value="5" />
-              <label for="star5' . $i . '" title="text">5 stars</label>
-              <input required type="radio" id="star4' . $i . '"
-                name="question' . $question['feedbackQuestionId'] . '-response" value="4" />
-              <label for="star4' . $i . '" title="text">4 stars</label>
-              <input required type="radio" id="star3' . $i . '"
-                name="question' . $question['feedbackQuestionId'] . '-response" value="3" />
-              <label for="star3' . $i . '" title="text">3 stars</label>
-              <input required type="radio" id="star2' . $i . '"
-                name="question' . $question['feedbackQuestionId'] . '-response" value="2" />
-              <label for="star2' . $i . '" title="text">2 stars</label>
-              <input required type="radio" id="star1' . $i . '"
-                name="question' . $question['feedbackQuestionId'] . '-response" value="1" />
-              <label for="star1' . $i . '" title="text">1 star</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-9 col-md-9 col-sm-12">
-              <div class="mb-3 notes-evaluation">
-                <label for="formNotes" class="form-label text-paragraph">Notes</label>
-                <textarea class="form-control text-paragraph text-black" id="formNotes" rows="3"></textarea>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-12">
-              <div class="mb-3">
-                <label for="formFile" class="form-label text-paragraph">Upload Attachment</label>
-                <input class="form-control text-paragraph text-black" type="file" id="formFile">
-              </div>
-            </div>
-          </div>
-          <hr style="border: 2px solid #ffffff; border-radius: 20px;">
-        </div>
-        <div class="activity-evaluation">
-          <div class="d-flex row mb-2">
-            <div class="col-8 evaluation">
-              <p class="text-paragraph mb-0"><span class="number-form">2. </span><span class="activities-form">Unloading
-                  Time</span></p>
-            </div>
-            <div class="col-4 guideline" style="text-align: end;">
-              <a data-bs-toggle="modal" data-bs-target="#modalGuideline" type="button"
-                class="text-white text-paragraph">Guideline
-                <span style="color: #ffc107"><i class="fa fa-exclamation-circle ms-1 font-18"></i></span></a>
-            </div>
-          </div>
-          <p class="text-paragraph"><span class="measurement-form">Jam Mulai Bongkar - Selesai Bongkar sesuai target
-              per jenis armada</span></p>
-          <!-- Slider -->
-          <div class="slider-container d-flex align-items-center mb-3">
-            <input type="range" min="0" max="100" value="50" class="slider slider-form" id="myRange">
-            <input type="number" min="0" max="100" value="50" class="slider-value" id="slider-value">
-          </div>
-          <!-- end Slider -->
-          <div class="row">
-            <div class="col-lg-9 col-md-9 col-sm-12">
-              <div class="mb-3 notes-evaluation">
-                <label for="formNotes" class="form-label text-paragraph">Notes</label>
-                <textarea class="form-control text-paragraph text-black" id="formNotes" rows="3"></textarea>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-12">
-              <div class="mb-3">
-                <label for="formFile" class="form-label text-paragraph">Upload Attachment</label>
-                <input class="form-control text-paragraph text-black" type="file" id="formFile">
-              </div>
-            </div>
-          </div>
-          <hr style="border: 2px solid #ffffff; border-radius: 20px;">
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="sec container" id="checkerOutbound">
-    <div class="card card-mini-simulator mb-5">
-      <div class="card-header py-3">
-        <h6 class="text-white text-center">Checker Outbound</h6>
-      </div>
-      <div class="card-body">
-
-        <div class="activity-evaluation">
-          <div class="d-flex row mb-2">
-            <div class="col-8 evaluation">
-              <p class="text-paragraph mb-0"><span class="number-form">1. </span><span
-                  class="activities-form">Loading</span></p>
-            </div>
-            <div class="col-4 guideline" style="text-align: end;">
-              <a data-bs-toggle="modal" data-bs-target="#modalGuideline" type="button"
-                class="text-white text-paragraph">Guideline
-                <span style="color: #ffc107"><i class="fa fa-exclamation-circle ms-1 font-18"></i></span></a>
-            </div>
-          </div>
-          <p class="text-paragraph"><span class="measurement-form">Jumlah Task per checker : jam kerja checker
-              Diluar Jam Lembur</span></p>
-          <!-- Slider -->
-          <div class="slider-container d-flex align-items-center mb-3">
-            <input type="range" min="0" max="100" value="50" class="slider slider-form" id="myRange">
-            <input type="number" min="0" max="100" value="50" class="slider-value" id="slider-value">
-          </div>
-          <!-- end Slider -->
-          <div class="row">
-            <div class="col-lg-9 col-md-9 col-sm-12">
-              <div class="mb-3 notes-evaluation">
-                <label for="formNotes" class="form-label text-paragraph">Notes</label>
-                <textarea class="form-control text-paragraph text-black" id="formNotes" rows="3"></textarea>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-12">
-              <div class="mb-3">
-                <label for="formFile" class="form-label text-paragraph">Upload Attachment</label>
-                <input class="form-control text-paragraph text-black" type="file" id="formFile">
-              </div>
-            </div>
-          </div>
-          <hr style="border: 2px solid #ffffff; border-radius: 20px;">
-        </div>
-
-        <div class="activity-evaluation">
-          <div class="d-flex row mb-2">
-            <div class="col-8 evaluation">
-              <p class="text-paragraph mb-0"><span class="number-form">2. </span><span
-                  class="activities-form">Loading</span></p>
-            </div>
-            <div class="col-4 guideline" style="text-align: end;">
-              <a data-bs-toggle="modal" data-bs-target="#modalGuideline" type="button"
-                class="text-white text-paragraph">Guideline
-                <span style="color: #ffc107"><i class="fa fa-exclamation-circle ms-1 font-18"></i></span></a>
-            </div>
-          </div>
-          <p class="text-paragraph"><span class="measurement-form">Jumlah Dokumen per checker : jam kerja checker
-              Diluar Jam Lembur</span></p>
-          <!-- Slider -->
-          <div class="slider-container d-flex align-items-center mb-3">
-            <input type="range" min="0" max="100" value="50" class="slider slider-form" id="myRange">
-            <input type="number" min="0" max="100" value="50" class="slider-value" id="slider-value">
-          </div>
-          <!-- end Slider -->
-          <div class="row">
-            <div class="col-lg-9 col-md-9 col-sm-12">
-              <div class="mb-3 notes-evaluation">
-                <label for="formNotes" class="form-label text-paragraph">Notes</label>
-                <textarea class="form-control text-paragraph text-black" id="formNotes" rows="3"></textarea>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-12">
-              <div class="mb-3">
-                <label for="formFile" class="form-label text-paragraph">Upload Attachment</label>
-                <input class="form-control text-paragraph text-black" type="file" id="formFile">
-              </div>
-            </div>
-          </div>
-          <hr style="border: 2px solid #ffffff; border-radius: 20px;">
-        </div>
-
-
-      </div>
-    </div>
-  </section>
-  <section class="sec" id="service">service</section>
-  <section class="sec" id="project">project</section>
-  <section class="sec" id="contact">contact</section>
-
   <section>
     <div class="container">
-      <div class="d-flex justify-content-center mb-4">
+      <div class="d-flex justify-content-center mb-3">
         <div>
           <h5 class="font-weight-bold mb-0">Form Penilaian MSBW</h5>
         </div>
       </div>
-      <div class="card card-mini-simulator mb-5">
+      <div class="d-flex justify-content-start mb-3">
+        <div class="text-white">MSBW Score : <span>
+            <div class="badge rounded-pill text-white bg-success p-2 text-uppercase px-3">
+              75</div>
+          </span> <span>
+            <div class="badge rounded-pill text-white bg-danger p-2 text-uppercase px-3">
+              70</div>
+          </span>
+          <span>
+            <div class="badge rounded-pill text-white bg-secondary p-2 text-uppercase px-3">
+              Not Initiated</div>
+          </span>
+        </div>
+        <div class="ms-auto">
+          <button type="button" class="btn btn-success radius-10" data-bs-toggle="modal"
+            data-bs-target="#modalApproveValidation"><i class="lni lni-checkmark me-2"></i>Submit</button>
+        </div>
+      </div>
+
+      <div class="card card-mini-simulator card-form-eval mb-5" id="formCheckReceiving">
         <div class="card-header py-3">
           <h6 class="text-white text-center">Checker Receiving</h6>
         </div>
@@ -558,12 +499,11 @@
         </div>
       </div>
 
-      <div class="card card-mini-simulator mb-5">
+      <div class="card card-mini-simulator card-form-eval mb-5" id="formCheckOutbound" style="display: none;">
         <div class="card-header py-3">
           <h6 class="text-white text-center">Checker Outbound</h6>
         </div>
         <div class="card-body">
-
           <div class="activity-evaluation">
             <div class="d-flex row mb-2">
               <div class="col-8 evaluation">
@@ -642,7 +582,7 @@
         </div>
       </div>
 
-      <div class="card card-mini-simulator mb-5">
+      <div class="card card-mini-simulator card-form-eval mb-5" id="formTransporter" style="display: none;">
         <div class="card-header py-3">
           <h6 class="text-white text-center">Attitude Assessment</h6>
         </div>
@@ -891,6 +831,38 @@
         });
       });
     });
+  </script>
+  <script>
+    function formEvalBtn(evt, menuName) {
+      // Declare all variables
+      var i, tabcontent, tablinks;
+
+      // Get all elements with class="tabcontent" and hide them
+      tabcontent = document.getElementsByClassName("card-form-eval");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.transform = "scaleY(0.2)";
+        tabcontent[i].style.display = "none";
+      }
+
+      // Get all elements with class="tablinks" and remove the class "active"
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+
+      // Show the current tab, and add an "active" class to the button that opened the tab
+      document.getElementById(menuName).style.display = "block";
+      evt.currentTarget.className += " active";
+      setTimeout(() => {
+        document.getElementById(menuName).style.transform = "scaleY(1)";
+      }, 50);
+    }
+
+    window.onload = (event) => {
+      document.getElementById("profile").style.display = "block";
+      document.getElementById("profile").style.transform = "scaleY(1)";
+    };
+
   </script>
 </body>
 

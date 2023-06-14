@@ -227,234 +227,52 @@
   </button>
   <!-- Floating Button -->
 
-  <nav class="scrollspy-form">
-    <ul>
-      <li>
-        <a href="#checkerReceiving" class="dot active" data-scroll="checkerReceiving">
-          <span>Checker Receiving</span>
-        </a>
-      </li>
-      <li>
-        <a href="#checkerOutbound" class="dot" data-scroll="checkerOutbound">
-          <span>Checker Outbound</span>
-        </a>
-      </li>
-      <li>
-        <a href="#service" class="dot" data-scroll="service">
-          <span>service</span>
-        </a>
-      </li>
-      <li>
-        <a href="#project" class="dot" data-scroll="project">
-          <span>project</span>
-        </a>
-      </li>
-      <li>
-        <a href="#contact" class="dot" data-scroll="contact">
-          <span>contact</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
-
-  <section class="sec container" id="checkerReceiving">
-    <div class="card card-mini-simulator mb-5">
-      <div class="card-header py-3">
-        <h6 class="text-white text-center">Checker Receiving</h6>
-      </div>
-      <div class="card-body">
-        <div class="activity-evaluation">
-          <div class="d-flex row mb-2">
-            <div class="col-8 evaluation">
-              <p class="text-paragraph mb-0"><span class="number-form">1. </span><span class="activities-form">Queing
-                  Time
-                  Inbound</span></p>
-            </div>
-            <div class="col-4 guideline" style="text-align: end;">
-              <a data-bs-toggle="modal" data-bs-target="#modalGuideline" type="button"
-                class="text-white text-paragraph">Guideline
-                <span style="color: #ffc107"><i class="fa fa-exclamation-circle ms-1 font-18"></i></span></a>
-            </div>
-          </div>
-          <p class="text-paragraph"><span class="measurement-form">Jam Tiba Armada sampai dengan Jam Bongkar ≤ 24
-              Jam</span></p>
-          <!-- Slider -->
-          <div class="slider-container d-flex align-items-center mb-3">
-            <input type="range" min="0" max="100" value="50" class="slider slider-form" id="myRange">
-            <input type="number" min="0" max="100" value="50" class="slider-value" id="slider-value">
-          </div>
-          <!-- end Slider -->
-          <div class="d-flex slider-container">
-            <div class="rate">
-              <input required type="radio" id="star5' . $i . '"
-                name="question' . $question['feedbackQuestionId'] . '-response" value="5" />
-              <label for="star5' . $i . '" title="text">5 stars</label>
-              <input required type="radio" id="star4' . $i . '"
-                name="question' . $question['feedbackQuestionId'] . '-response" value="4" />
-              <label for="star4' . $i . '" title="text">4 stars</label>
-              <input required type="radio" id="star3' . $i . '"
-                name="question' . $question['feedbackQuestionId'] . '-response" value="3" />
-              <label for="star3' . $i . '" title="text">3 stars</label>
-              <input required type="radio" id="star2' . $i . '"
-                name="question' . $question['feedbackQuestionId'] . '-response" value="2" />
-              <label for="star2' . $i . '" title="text">2 stars</label>
-              <input required type="radio" id="star1' . $i . '"
-                name="question' . $question['feedbackQuestionId'] . '-response" value="1" />
-              <label for="star1' . $i . '" title="text">1 star</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-9 col-md-9 col-sm-12">
-              <div class="mb-3 notes-evaluation">
-                <label for="formNotes" class="form-label text-paragraph">Notes</label>
-                <textarea class="form-control text-paragraph text-black" id="formNotes" rows="3"></textarea>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-12">
-              <div class="mb-3">
-                <label for="formFile" class="form-label text-paragraph">Upload Attachment</label>
-                <input class="form-control text-paragraph text-black" type="file" id="formFile">
-              </div>
-            </div>
-          </div>
-          <hr style="border: 2px solid #ffffff; border-radius: 20px;">
-        </div>
-        <div class="activity-evaluation">
-          <div class="d-flex row mb-2">
-            <div class="col-8 evaluation">
-              <p class="text-paragraph mb-0"><span class="number-form">2. </span><span class="activities-form">Unloading
-                  Time</span></p>
-            </div>
-            <div class="col-4 guideline" style="text-align: end;">
-              <a data-bs-toggle="modal" data-bs-target="#modalGuideline" type="button"
-                class="text-white text-paragraph">Guideline
-                <span style="color: #ffc107"><i class="fa fa-exclamation-circle ms-1 font-18"></i></span></a>
-            </div>
-          </div>
-          <p class="text-paragraph"><span class="measurement-form">Jam Mulai Bongkar - Selesai Bongkar sesuai target
-              per jenis armada</span></p>
-          <!-- Slider -->
-          <div class="slider-container d-flex align-items-center mb-3">
-            <input type="range" min="0" max="100" value="50" class="slider slider-form" id="myRange">
-            <input type="number" min="0" max="100" value="50" class="slider-value" id="slider-value">
-          </div>
-          <!-- end Slider -->
-          <div class="row">
-            <div class="col-lg-9 col-md-9 col-sm-12">
-              <div class="mb-3 notes-evaluation">
-                <label for="formNotes" class="form-label text-paragraph">Notes</label>
-                <textarea class="form-control text-paragraph text-black" id="formNotes" rows="3"></textarea>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-12">
-              <div class="mb-3">
-                <label for="formFile" class="form-label text-paragraph">Upload Attachment</label>
-                <input class="form-control text-paragraph text-black" type="file" id="formFile">
-              </div>
-            </div>
-          </div>
-          <hr style="border: 2px solid #ffffff; border-radius: 20px;">
-        </div>
+  <div class="section-popular-heading mt-4 mb-4">
+    <div class="d-flex align-items-center justify-content-center">
+      <div class="nav-menu-learning justify-content-center" id="kategoriContainer">
+        <a type="button" class="px-3 py-1 text-decoration-none tablinks mb-2 active"
+          onclick="formEvalBtn(event, 'formCheckReceiving')">Checker Receiving</a>
+        <a type="button" class="px-3 py-1 text-decoration-none tablinks mb-2"
+          onclick="formEvalBtn(event, 'formCheckOutbound')">Checker Outbound</a>
+        <a type="button" class="px-3 py-1 text-decoration-none tablinks mb-2"
+          onclick="formEvalBtn(event, 'formTransporter')">Transporter</a>
+        <a type="button" class="px-3 py-1 text-decoration-none tablinks mb-2"
+          onclick="formEvalBtn(event, 'formPetRetur')">Pet Retur</a>
+        <a type="button" class="px-3 py-1 text-decoration-none tablinks mb-2"
+          onclick="formEvalBtn(event, 'formPicker')">Picker</a>
+        <a type="button" class="px-3 py-1 text-decoration-none tablinks mb-2"
+          onclick="formEvalBtn(event, 'formWhsAdministration')">Whs Administration</a>
       </div>
     </div>
-  </section>
-  <section class="sec container" id="checkerOutbound">
-    <div class="card card-mini-simulator mb-5">
-      <div class="card-header py-3">
-        <h6 class="text-white text-center">Checker Outbound</h6>
-      </div>
-      <div class="card-body">
-
-        <div class="activity-evaluation">
-          <div class="d-flex row mb-2">
-            <div class="col-8 evaluation">
-              <p class="text-paragraph mb-0"><span class="number-form">1. </span><span
-                  class="activities-form">Loading</span></p>
-            </div>
-            <div class="col-4 guideline" style="text-align: end;">
-              <a data-bs-toggle="modal" data-bs-target="#modalGuideline" type="button"
-                class="text-white text-paragraph">Guideline
-                <span style="color: #ffc107"><i class="fa fa-exclamation-circle ms-1 font-18"></i></span></a>
-            </div>
-          </div>
-          <p class="text-paragraph"><span class="measurement-form">Jumlah Task per checker : jam kerja checker
-              Diluar Jam Lembur</span></p>
-          <!-- Slider -->
-          <div class="slider-container d-flex align-items-center mb-3">
-            <input type="range" min="0" max="100" value="50" class="slider slider-form" id="myRange">
-            <input type="number" min="0" max="100" value="50" class="slider-value" id="slider-value">
-          </div>
-          <!-- end Slider -->
-          <div class="row">
-            <div class="col-lg-9 col-md-9 col-sm-12">
-              <div class="mb-3 notes-evaluation">
-                <label for="formNotes" class="form-label text-paragraph">Notes</label>
-                <textarea class="form-control text-paragraph text-black" id="formNotes" rows="3"></textarea>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-12">
-              <div class="mb-3">
-                <label for="formFile" class="form-label text-paragraph">Upload Attachment</label>
-                <input class="form-control text-paragraph text-black" type="file" id="formFile">
-              </div>
-            </div>
-          </div>
-          <hr style="border: 2px solid #ffffff; border-radius: 20px;">
-        </div>
-
-        <div class="activity-evaluation">
-          <div class="d-flex row mb-2">
-            <div class="col-8 evaluation">
-              <p class="text-paragraph mb-0"><span class="number-form">2. </span><span
-                  class="activities-form">Loading</span></p>
-            </div>
-            <div class="col-4 guideline" style="text-align: end;">
-              <a data-bs-toggle="modal" data-bs-target="#modalGuideline" type="button"
-                class="text-white text-paragraph">Guideline
-                <span style="color: #ffc107"><i class="fa fa-exclamation-circle ms-1 font-18"></i></span></a>
-            </div>
-          </div>
-          <p class="text-paragraph"><span class="measurement-form">Jumlah Dokumen per checker : jam kerja checker
-              Diluar Jam Lembur</span></p>
-          <!-- Slider -->
-          <div class="slider-container d-flex align-items-center mb-3">
-            <input type="range" min="0" max="100" value="50" class="slider slider-form" id="myRange">
-            <input type="number" min="0" max="100" value="50" class="slider-value" id="slider-value">
-          </div>
-          <!-- end Slider -->
-          <div class="row">
-            <div class="col-lg-9 col-md-9 col-sm-12">
-              <div class="mb-3 notes-evaluation">
-                <label for="formNotes" class="form-label text-paragraph">Notes</label>
-                <textarea class="form-control text-paragraph text-black" id="formNotes" rows="3"></textarea>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-12">
-              <div class="mb-3">
-                <label for="formFile" class="form-label text-paragraph">Upload Attachment</label>
-                <input class="form-control text-paragraph text-black" type="file" id="formFile">
-              </div>
-            </div>
-          </div>
-          <hr style="border: 2px solid #ffffff; border-radius: 20px;">
-        </div>
-
-
-      </div>
-    </div>
-  </section>
-  <section class="sec" id="service">service</section>
-  <section class="sec" id="project">project</section>
-  <section class="sec" id="contact">contact</section>
+  </div>
 
   <section>
     <div class="container">
-      <div class="d-flex justify-content-center mb-4">
+      <div class="d-flex justify-content-center mb-3">
         <div>
           <h5 class="font-weight-bold mb-0">Form Penilaian MSBW</h5>
         </div>
       </div>
-      <div class="card card-mini-simulator mb-5">
+      <div class="d-flex justify-content-start mb-3">
+        <div class="text-white">MSBW Score : <span>
+            <div class="badge rounded-pill text-white bg-success p-2 text-uppercase px-3">
+              75</div>
+          </span> <span>
+            <div class="badge rounded-pill text-white bg-danger p-2 text-uppercase px-3">
+              70</div>
+          </span>
+          <span>
+            <div class="badge rounded-pill text-white bg-secondary p-2 text-uppercase px-3">
+              Not Initiated</div>
+          </span>
+        </div>
+        <div class="ms-auto">
+          <button type="button" class="btn btn-success radius-10" data-bs-toggle="modal"
+            data-bs-target="#modalApproveValidation"><i class="lni lni-checkmark me-2"></i>Submit</button>
+        </div>
+      </div>
+
+      <div class="card card-mini-simulator card-form-eval mb-5" id="formCheckReceiving">
         <div class="card-header py-3">
           <h6 class="text-white text-center">Checker Receiving</h6>
         </div>
@@ -558,12 +376,11 @@
         </div>
       </div>
 
-      <div class="card card-mini-simulator mb-5">
+      <div class="card card-mini-simulator card-form-eval mb-5" id="formCheckOutbound" style="display: none;">
         <div class="card-header py-3">
           <h6 class="text-white text-center">Checker Outbound</h6>
         </div>
         <div class="card-body">
-
           <div class="activity-evaluation">
             <div class="d-flex row mb-2">
               <div class="col-8 evaluation">
@@ -642,7 +459,7 @@
         </div>
       </div>
 
-      <div class="card card-mini-simulator mb-5">
+      <div class="card card-mini-simulator card-form-eval mb-5" id="formTransporter" style="display: none;">
         <div class="card-header py-3">
           <h6 class="text-white text-center">Attitude Assessment</h6>
         </div>
@@ -891,6 +708,65 @@
         });
       });
     });
+  </script>
+  <script>
+    function formEvalBtn(evt, menuName) {
+      // Declare all variables
+      var i, tabcontent, tablinks;
+
+      // Get all elements with class="tabcontent" and hide them
+      tabcontent = document.getElementsByClassName("card-form-eval");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.transform = "scaleY(0.2)";
+        tabcontent[i].style.display = "none";
+      }
+
+      // Get all elements with class="tablinks" and remove the class "active"
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" selected", "");
+      }
+
+      // Show the current tab, and add an "active" class to the button that opened the tab
+      document.getElementById(menuName).style.display = "block";
+      evt.currentTarget.className += " selected";
+      setTimeout(() => {
+        document.getElementById(menuName).style.transform = "scaleY(1)";
+      }, 50);
+    }
+
+    window.onload = (event) => {
+      document.getElementById("profile").style.display = "block";
+      document.getElementById("profile").style.transform = "scaleY(1)";
+    };
+
+  </script>
+  <script>
+    // Vanilla JavaScript
+    document.addEventListener('DOMContentLoaded', function () {
+      // Get all the radio buttons
+      var radioButtons = document.querySelectorAll('input[type="radio"]');
+
+      // Add change event listener to each radio button
+      radioButtons.forEach(function (radioButton) {
+        radioButton.addEventListener('change', function () {
+          // Get the parent div element
+          var rateDiv = this.closest('.rate');
+
+          // Remove existing classes from the div
+          rateDiv.classList.remove('rate-danger');
+          rateDiv.classList.remove('rate-success');
+
+          // Check the selected value and update the class accordingly
+          if (this.value <= 3) {
+            rateDiv.classList.add('rate-danger');
+          } else {
+            rateDiv.classList.add('rate-success');
+          }
+        });
+      });
+    });
+
   </script>
 </body>
 

@@ -4628,6 +4628,11 @@ p {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
+.card-dark {
+  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
 .text-paragraph {
   font-size: 13px;
   font-weight: 300;
@@ -4916,6 +4921,7 @@ p {
   stroke: rgb(255 255 255 / 12%);
 }
 
+/* RATE POST TEST STAR */
 .rate {
   float: left;
   height: 46px;
@@ -4955,4 +4961,122 @@ p {
 .rate input {
   display: none;
   vertical-align: middle; /* Tambahkan baris ini */
+}
+
+.rate-success {
+  float: left;
+  height: 46px;
+  /* padding: 0 10px; */
+}
+.rate-success:not(:checked) > input {
+  position: absolute;
+  top: -9999px;
+}
+.rate-success:not(:checked) > label {
+  float: right;
+  width: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 30px;
+  color: #ccc;
+}
+.rate-success:not(:checked) > label:before {
+  content: "★ ";
+}
+.rate-success > input:checked ~ label {
+  color: #198754;
+}
+.rate-success:not(:checked) > label:hover,
+.rate-success:not(:checked) > label:hover ~ label {
+  color: #deb217;
+}
+.rate-success > input:checked + label:hover,
+.rate-success > input:checked + label:hover ~ label,
+.rate-success > input:checked ~ label:hover,
+.rate-success > input:checked ~ label:hover ~ label,
+.rate-success > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}
+
+.rate-success input {
+  display: none;
+  vertical-align: middle; /* Tambahkan baris ini */
+}
+
+.rate-danger {
+  float: left;
+  height: 46px;
+  /* padding: 0 10px; */
+}
+.rate-danger:not(:checked) > input {
+  position: absolute;
+  top: -9999px;
+}
+.rate-danger:not(:checked) > label {
+  float: right;
+  width: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 30px;
+  color: #ccc;
+}
+.rate-danger:not(:checked) > label:before {
+  content: "★ ";
+}
+.rate-danger > input:checked ~ label {
+  color: #dc3545;
+}
+.rate-danger:not(:checked) > label:hover,
+.rate-danger:not(:checked) > label:hover ~ label {
+  color: #deb217;
+}
+.rate-danger > input:checked + label:hover,
+.rate-danger > input:checked + label:hover ~ label,
+.rate-danger > input:checked ~ label:hover,
+.rate-danger > input:checked ~ label:hover ~ label,
+.rate-danger > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}
+
+.rate-danger input {
+  display: none;
+  vertical-align: middle; /* Tambahkan baris ini */
+}
+
+.sidebar-nd {
+  background: #fff;
+  border-radius: 26px;
+  height: 78vh;
+  left: 0;
+  margin-left: 25px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  transition: 0.3s ease-in-out;
+  width: 290px;
+  z-index: 9;
+}
+
+.main-wrapper-form {
+  margin-left: 330px;
+  margin-right: auto;
+  padding: 50px 0;
+  position: relative;
+}
+
+#sideForm {
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+#contentForm {
+  margin-left: 375px;
+  position: relative;
+}
+
+.list-group-item.list-group-item-action.active {
+  background-color: #0396a6;
 }
